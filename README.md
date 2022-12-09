@@ -34,6 +34,7 @@
   - Java 17.0.5
   - Spring Boot 3.0.0 (Gradle)
 - Database
+  - MySQL 8.0.28
 
 ## 3. 구현 기능
 
