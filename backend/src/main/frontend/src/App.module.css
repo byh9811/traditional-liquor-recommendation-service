@@ -1,0 +1,20 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+html,body {
+  position : relative;
+  /* container를 위한 relative */
+  width : 100vw;
+  height : 100vh; 
+  /* container가운데 정렬! */
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width : 80vw;
+  height : 90vh;
+  border : 2px solid black;
+}
