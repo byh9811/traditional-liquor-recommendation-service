@@ -1,16 +1,5 @@
 .container {
     width : 200px;
     height : 200px; 
-}
-.container > .number {
-    font-size : 4rem;
-    font-weight : 800;
-    text-align: center;
-}
-.container > .button {
-    width : 100px;
-    height : 25px;
-    background-color: paleturquoise;
-    color : black;
-    border : 3px solid black;
+    border : 2px solid black;
 }
