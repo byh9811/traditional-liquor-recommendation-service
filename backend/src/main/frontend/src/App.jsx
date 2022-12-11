@@ -27,6 +27,7 @@ export default function App() {
         <Count 
         total = { total }
         onClick = { addTotal }
+        // 리엑트 개발 시작!
         />
 
         <button
