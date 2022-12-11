@@ -1,39 +1,54 @@
 import React from 'react'
+import { Children } from 'react';
 import { useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import app from './App.module.css';
-import Count from './component/Main/Count';
-export default function App() {
-    // 부모는 공통 data + 개별 data를 가질 수 있다! 
-    // 공통 data 
-    let [total, setTotal] = useState(0);
-    let addTotal = () => {
-        setTotal(total + 1);
-    } // 자식에서 click을 해도 addTotal이 발동해야돼!! 
+import Navbar from './Component/Navbar';
+import Detail from './Pages/Detail';
+import Error from './Pages/Error';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import Root from './Pages/Root';
 
-    let [toggle , setToggle] = useState("true");
-    let turn = () => {
-        toggle === "true" ? setToggle("false") : setToggle("true");
+const router = createBrowserRouter([
+    {
+        path : '/', 
+        element : <Root />,
+        errorElement : <Error />,
+        children : [
+            // 여기안에다가 변하는 자식요소들을 정해준다! 
+            {
+                index : true, // 최상위 경로는 /가 맞음! 
+                element : <Home />,
+            },
+            {
+                path : '/Login', // path가 /니까 거기 아래 /login이 돼! 
+                element : <Login />,
+            },
+            {
+                // detail page만들거야!! 
+                path : '/login/:id',
+                element : <Detail />
+            }
+        ]
+    },
+    {
+        path : '/login', 
+        element : <Root />, 
+        errorElement : <Error />,
+        children : [
+            // 여기안에다가 변하는 자식요소들을 정해준다! 
+            {
+                index : true,
+                element : <Login />,
+            }
+        ]
     }
+]);
+export default function App() {
+    
   return (
-    <div className={app.container}>
-        <div className={ app.total__count }>
-            { total }
-        </div>
-        <Count 
-        total = { total }
-        onClick = { addTotal }
-        // 값도 전달할 수 있고, 자식이 필요하면 함수도 전달할 수 있어.
-        />
-        <Count 
-        total = { total }
-        onClick = { addTotal }
-        // 리엑트 개발 시작!
-        />
-
-        <button
-        onClick = { turn }
-        >{ toggle }</button>
-    </div>
+    <RouterProvider router = {router}/>
         
   )
 }
@@ -59,4 +74,11 @@ export default function App() {
 // 만약 공통 data를 자식도 쓰고싶다면 props로 전달해준다! => 자식에게 선언하고, component할 때 초기화만 해주면 돼! 
 
 // 자식만 쓰고싶은 data가 있다면 부모에게 전달받지 않아도 돼! 
+
+// 라우팅이란? 우리가 url을 입력하면 서버상에서 새로운 data를 보내준다.!! 
+// 새로운 url을 요청하면 그에 맞는 data를 받아온다! 
+// CSR 라우팅이란? 
+// -> 필요한 부분만 업데이트 됨.
+// -> 새로운 경로를 입력했을 때 서버에게 새로운 페이지를 요청하는 것이 아니라.
+// => 필요한 data만 부분적으로 요청해서 받아온다! 
 
