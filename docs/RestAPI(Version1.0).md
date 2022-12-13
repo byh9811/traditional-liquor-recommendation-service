@@ -64,7 +64,10 @@
 #### 2. 전통주점
 ### 지역별 전통주점 검색
 
-- URI: GET /drink-shops/:areaName
+- URI: GET /drink-shops
+- Request
+  - areaName: String
+  - page: Integer
 - Response
   - status: Integer
   - message: String
