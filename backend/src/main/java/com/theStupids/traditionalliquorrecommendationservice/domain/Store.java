@@ -17,9 +17,6 @@ public class Store {
     @Column(nullable = false, unique = true)
     private String address;
 
-    @Column
-    private String time;
-
     @Column(unique = true)
     private String tel;
 
