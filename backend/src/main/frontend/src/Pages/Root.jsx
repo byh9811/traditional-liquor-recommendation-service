@@ -1,15 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Navbar from '../Component/Navbar'
-import root from './Root.module.css';
+import Navbar from '../components/Navbar'
 
 export default function Root() {
   return (
-    <div className={ root.container }>
-        <Navbar /> 
-        <Outlet />
-        {/* navbar는 고정이고 outlet안에서 이제 변하는
-        컴포넌트를 만들어 나갈거야!  */}
-    </div> 
+    <nav>
+        <Navbar />
+        <Outlet />         
+        {/* Outlet위에 1개만 고정하고싶을 때! 
+        그럼 옆에 sidebar도 같이 고정하고싶으면 어떡할까..?
+        혼자 해보자.
+        */}
+    </nav>
   )
 }

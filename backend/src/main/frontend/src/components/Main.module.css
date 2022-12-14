@@ -1,0 +1,44 @@
+main {
+    width : 100%;
+    height : calc(125vh - 75px);
+    border : 2px solid black;
+    background-color: palegreen;
+
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1.5fr 1.5fr;
+    grid-template-areas: 
+    "carousel carousel carousel"
+    "test test ex"
+    "_all shop shop";
+    grid-gap : 1vh 1vw;
+}
+main > *{
+    border : 2px solid black;
+}
+.carousel {
+    grid-area: carousel;
+}
+.test__page {
+    grid-area: test;
+}
+.ex__page {
+    grid-area: ex;
+}
+.all__page {
+    grid-area: _all;
+}
+.shop__page {
+    grid-area: shop;
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas: 
+        "carousel carousel"
+        "test ex"
+        "_all shop";
+    }
+}
