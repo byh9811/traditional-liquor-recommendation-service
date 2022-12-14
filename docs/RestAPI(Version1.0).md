@@ -7,8 +7,9 @@
 
 - URI: GET /main-carousel
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - id: Integer
     - img: String
@@ -23,8 +24,9 @@
   - page: Integer
   - sort: Integer
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - id: Integer
     - img: String
@@ -34,17 +36,19 @@
     - type: String
     - alcohol: Double
     - food: Array (String)
-    - totalData: Integer
-    - dataPerPage: Integer
-    - pageCount: Integer
+  - pageData
+    - startPage: Integer
+    - endPage: Integer
+    - totalPages: Integer
     - currentPage: Integer
 
 ### 전통주 한 개 조회
 
 - URI: GET /drinks/:id
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - id: Integer
     - title: String
@@ -69,24 +73,30 @@
   - areaName: String
   - page: Integer
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - id: Integer
-    - img: String
     - name: String
     - address: String
-    - phone: String
+    - tel: String
     - menu: Array (String)
     - link: String
+  - pageData
+    - startPage: Integer
+    - endPage: Integer
+    - totalPages: Integer
+    - currentPage: Integer
 
 #### 3. 전통주 용어사전
 ### 메인 페이지 서브 캐러셀에 표시될 전통주 용어사전
 
 - URI: GET /drink-guides
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - keyword: String
     - meaning: String
@@ -98,8 +108,9 @@
 - Request
   - response: Array (String)
 - Response
-  - status: Integer
-  - message: String
+  - status
+    - code: Integer
+    - message: String
   - data
     - questionType: Integer
     - question: String
