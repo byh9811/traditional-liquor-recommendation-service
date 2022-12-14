@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class PageData {
-    int totalData;
-    int dataPerPage;
-    int pageCount;
+    int startPage;
+    int endPage;
+    int totalPages;
     int currentPage;
 }
