@@ -2,7 +2,8 @@
 
 ---
 
-#### 1. 전통주
+#### 1. 메인&검색
+
 ### 메인 페이지 메인 캐러셀에 표시될 전통주 조회
 
 - URI: GET /main-carousel
@@ -66,9 +67,10 @@
     - flavor_type: Integer
 
 #### 2. 전통주점
+
 ### 지역별 전통주점 검색
 
-- URI: GET /drink-shops
+- URI: GET /drink-stores
 - Request
   - areaName: String
   - page: Integer
@@ -90,6 +92,7 @@
     - currentPage: Integer
 
 #### 3. 전통주 용어사전
+
 ### 메인 페이지 서브 캐러셀에 표시될 전통주 용어사전
 
 - URI: GET /drink-guides
@@ -102,9 +105,10 @@
     - meaning: String
 
 #### 4. 전통주 취향 질문
+
 ### 취향 테스트 페이지 접속
 
-- URI: GET /drink-test/index
+- URI: GET /drink-test
 - Request
   - response: Array (String)
 - Response
@@ -116,5 +120,15 @@
     - question: String
     - response: Array (String)
     - result_type: String
+
+### 취향 테스트 결과
+
+- URI: GET /drink-test/{flavor_type}
+- Response
+  - status
+    - code: Integer
+    - message: String
+  - data
+    - flavor_type: Integer
 
 ### 취향 테스트 수행
