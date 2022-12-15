@@ -116,10 +116,7 @@
     - code: Integer
     - message: String
   - data
-    - questionType: Integer
     - question: String
-    - response: Array (String)
-    - result_type: String
 
 ### 취향 테스트 결과
 
