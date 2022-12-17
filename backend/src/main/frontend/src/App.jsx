@@ -13,7 +13,7 @@ const router = createBrowserRouter([
         path : '/',
         element : <Root />,
         errorElement : <Error />,
-        // Root는 무조건 띄우고(navbar은 어디든지 고정!)
+        // Root는 무조건 띄우고(navbar은 어디든지 고정!
         children : [
             {
                 index : true, 
