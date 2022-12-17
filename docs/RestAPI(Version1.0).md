@@ -21,7 +21,6 @@
 - URI: GET /drinks
 - Request
   - search: String
-  - flavorType: List<Integer>
   - page: Integer
   - sort: Integer
 - Response
@@ -64,7 +63,6 @@
     - cool: Integer
     - material: Array (String)
     - company: String
-    - flavorType: Integer
 
 ## 2. 전통주점
 
@@ -101,8 +99,9 @@
     - code: Integer
     - message: String
   - data
-    - keyword: String
-    - meaning: String
+    - id: Integer
+    - keyword: Array (String)
+    - meaning: Array (String)
 
 ## 4. 전통주 취향 질문
 
@@ -126,4 +125,3 @@
     - code: Integer
     - message: String
   - data
-    - flavorType: Integer
