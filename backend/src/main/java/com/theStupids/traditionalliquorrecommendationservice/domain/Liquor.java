@@ -3,7 +3,7 @@ package com.theStupids.traditionalliquorrecommendationservice.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity(name = "liquors")
+@Entity(name = "liquor")
 @Data
 public class Liquor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,5 +45,5 @@ public class Liquor {
     private String company;
 
     @Column(nullable = false)
-    private int flavorType;
+    private int flavor_type;
 }
