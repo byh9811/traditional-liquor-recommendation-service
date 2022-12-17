@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface StoreRepository extends JpaRepository<Store, Integer> {
     Store findById(int id);
 
-    @Query(value = "select s from stores s where substring(s.address, 1, 2)=:region")
+    @Query(value = "select s from store s where substring(s.address, 1, 2)=:region")
     Page<Store> findByAddress(Pageable pageable, @Param("region") String region);
 }
