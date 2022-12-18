@@ -1,0 +1,51 @@
+:root {
+    --color-bg : #E9EAEC;
+    --color-green : #CFF3E6;
+    --color-sky : #C7D1DE;
+    --box-radius : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+html, body {
+    width : 100vw;
+    height : 100vh;
+}
+body {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+}
+.container {
+    width : 85vw;
+    height : 90vh;
+    /* border : 3px solid black; */
+    box-shadow: var(--box-radius);
+    border-radius : 20px;
+
+    display : grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas: 
+    "header header"
+    "nav main";
+    grid-gap : 1vh;
+}
+.container > *{
+    /* border : 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius : 10px;
+}
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+    /* border : 1px solid black; */
+}
+main {
+    grid-area: main;
+}
