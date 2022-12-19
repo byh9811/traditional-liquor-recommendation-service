@@ -8,5 +8,5 @@ import java.util.List;
 @Data
 public class LiquorResponse {
     Status status;
-    LiquorDetailDTO data;
+    Object data;
 }

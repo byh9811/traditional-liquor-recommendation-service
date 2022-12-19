@@ -28,4 +28,16 @@ public class LiquorController {
 
         return response;
     }
+
+    @GetMapping("/main-carousel")
+    public LiquorResponse getCarouselLiquor() {
+        LiquorResponse response = new LiquorResponse();
+        Status status = new Status();
+        status.setSuccess();
+        response.setStatus(status);
+
+        response.setData(liquorService.getCarouselLiquor());
+
+        return response;
+    }
 }
