@@ -1,11 +1,11 @@
-package com.example.drink.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import jakarta.persistence.*;
 
-@Entity(name = "guides")
+@Entity(name = "guide")
 @Getter
 @Setter
 public class Guide {
