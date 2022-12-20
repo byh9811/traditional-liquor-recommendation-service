@@ -2,9 +2,7 @@ package com.theStupids.traditionalliquorrecommendationservice.repository;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
 import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorCarousel;
-import com.theStupids.traditionalliquorrecommendationservice.dto.LiquorCarouselDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
