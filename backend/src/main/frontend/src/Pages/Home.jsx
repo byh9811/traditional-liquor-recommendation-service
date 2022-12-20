@@ -7,9 +7,18 @@ import main from './Home.module.css';
 export default function Home() {
   return (
     <div className={main.main__wrapper}>
-        <div className={main.content}>1</div>
-        <div className={main.content}>2</div>
-        <div className={main.content}>3</div>
+        <Func 
+          linkUrl="/test/index"
+          img = "/img/test.png"
+        />
+        <Func 
+          linkUrl="/all/index"
+          img = "/img/all.jpeg"
+        />
+        <Func 
+          linkUrl="/shops"
+          img = "/img/shop.png"
+        />
         <div className={main.carousel}>
             <Carousel />
         </div>

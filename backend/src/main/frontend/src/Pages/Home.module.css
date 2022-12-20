@@ -19,12 +19,27 @@
 /* content자식요소 3개중 첫 번째 */
 .content:nth-child(1) {
     grid-area: test;
+    position : relative;
 }
 .content:nth-child(2) {
     grid-area: _all;
+    position : relative;
 }
 .content:nth-child(3) {
     grid-area: shop;
+    position : relative;
+}
+.content > .link {
+    display : block;
+    width : 100%;
+    height : 100%;
+}
+.content img {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
 }
 .carousel {
     grid-area : carousel;
