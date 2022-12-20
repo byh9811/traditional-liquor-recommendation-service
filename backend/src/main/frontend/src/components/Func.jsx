@@ -7,6 +7,7 @@ export default function Func({ linkUrl, img }) {
     <div className={func.img__wrapper}>
         <Link className={ func.link }>
             <img src={ img } alt="" />
+            {/* ㅇㄴㅇ */}
         </Link>
     </div>
   )
