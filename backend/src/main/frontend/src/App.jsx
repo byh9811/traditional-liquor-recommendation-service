@@ -3,16 +3,17 @@ import { useState } from 'react';
 import app from './App.module.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
+import Home from './pages/Home';
 
 
 const router = createBrowserRouter([
 
   {
     path : '/',
-    element : <Root />,
-    children : [
+    element : <Root />, // root안에 outlet이 있구나 생각! 
+    children : [ // children은 무조건 Outlet안으로 들어간다고 생각하자!!
       {
-        index : true, element : <h2>MAIN</h2>
+        index : true, element : <Home />
       },
       {
         path : '/test/index' , element : <h2>TEST</h2>
