@@ -1,6 +1,7 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
+import com.theStupids.traditionalliquorrecommendationservice.dto.service.StoreSearchServiceDTO;
 import com.theStupids.traditionalliquorrecommendationservice.repository.StoreRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -16,7 +17,7 @@ public class StoreService {
         return storeRepository.findById(id).getName();
     }
 
-    public Page<Store> getStores(String region, int page) {
-        return storeRepository.findByAddress(PageRequest.of(page, 10), region);
+    public Page<Store> getStores(StoreSearchServiceDTO dto) {
+        return storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegion());
     }
 }
