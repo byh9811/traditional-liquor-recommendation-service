@@ -47,3 +47,4 @@ src/main/resources/static/manifest.json
 src/main/resources/static/robots.txt
 src/main/resources/static/data/**
 src/main/resources/static/static/**
+src/main/resources/static/img
