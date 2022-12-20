@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.dto;
+package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
 import lombok.Data;

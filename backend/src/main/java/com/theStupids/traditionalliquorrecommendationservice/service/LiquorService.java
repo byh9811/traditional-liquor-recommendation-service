@@ -1,7 +1,7 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
-import com.theStupids.traditionalliquorrecommendationservice.dto.LiquorCarouselDTO;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorCarouselDTO;
 import com.theStupids.traditionalliquorrecommendationservice.repository.LiquorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,10 @@
 package com.theStupids.traditionalliquorrecommendationservice.controller;
 
-import com.theStupids.traditionalliquorrecommendationservice.dto.LiquorDetailDTO;
-import com.theStupids.traditionalliquorrecommendationservice.dto.LiquorResponse;
-import com.theStupids.traditionalliquorrecommendationservice.dto.Status;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorDetailDTO;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.BaseResponse;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.Status;
 import com.theStupids.traditionalliquorrecommendationservice.service.LiquorService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,25 +17,33 @@ public class LiquorController {
     final LiquorService liquorService;
 
     @GetMapping("/drinks/{id}")
-    public LiquorResponse getLiquor(@PathVariable("id") int id) {
-        LiquorResponse response = new LiquorResponse();
+    public BaseResponse getLiquor(@PathVariable("id") int id) {
+        BaseResponse response = new BaseResponse();
         Status status = new Status();
-        status.setSuccess();
-        response.setStatus(status);
-
-        response.setData(new LiquorDetailDTO(liquorService.getLiquor(id), new ArrayList<>()));
+        try {
+            response.setData(new LiquorDetailDTO(liquorService.getLiquor(id), new ArrayList<>()));
+            status.setSuccess();
+            response.setStatus(status);
+        } catch (Exception e) {
+            status.setFail();
+            response.setStatus(status);
+        }
 
         return response;
     }
 
     @GetMapping("/main-carousel")
-    public LiquorResponse getCarouselLiquor() {
-        LiquorResponse response = new LiquorResponse();
+    public BaseResponse getCarouselLiquor() {
+        BaseResponse response = new BaseResponse();
         Status status = new Status();
-        status.setSuccess();
-        response.setStatus(status);
-
-        response.setData(liquorService.getCarouselLiquor());
+        try {
+            response.setData(liquorService.getCarouselLiquor());
+            status.setSuccess();
+            response.setStatus(status);
+        } catch (Exception e) {
+            status.setFail();
+            response.setStatus(status);
+        }
 
         return response;
     }

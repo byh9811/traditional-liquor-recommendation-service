@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.dto;
+package com.theStupids.traditionalliquorrecommendationservice.dto.controller.response;
 
 import lombok.Data;
 
