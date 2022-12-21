@@ -1,0 +1,25 @@
+form {
+    width : 100%;
+    height : 100%;
+    /* border : 1px solid black; */
+    /* background-color: black; */
+    overflow: hidden;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display : block;
+    width : 70%;
+    height : 40%;
+    outline : none;
+    border : none;
+    border-radius : 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    text-align: center;
+    font-size : 0.9rem;
+    font-style : italic;
+    background-color: transparent;
+    /* 부모의 배경색 그대로 따라하기! */
+}

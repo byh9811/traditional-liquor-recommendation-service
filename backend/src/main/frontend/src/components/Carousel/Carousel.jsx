@@ -12,7 +12,6 @@ export default function Carousel() {
         console.log(res.data);
         setDrinkData(res.data);
       });
-      // console.log(data);
     }catch {
       console.log('401 error!');
     }
@@ -24,12 +23,11 @@ export default function Carousel() {
   
   return (
     <div className={carousel.carousel__wrapper}>
-        {/* <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div> */}
-        <p>
+        <div className={carousel.item}>
           
-        </p>
+        </div>
+        <div className={carousel.item}>2</div>
+        <div className={carousel.item}>3</div>
     </div>
   )
 }

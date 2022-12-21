@@ -5,6 +5,8 @@ import React from 'react'
 // css연결! 
 import root from './Root.module.css';
 import { Outlet } from 'react-router-dom';
+
+import Header from '../components/Header/Header.jsx';
 import Navbar from '../components/Navbar';
 // import Navbar from '../components/Navbar'
 
@@ -12,7 +14,9 @@ export default function Root() {
   return (
 
     <div className={ root.container }>
-      <header>header</header>
+      <header>
+        <Header />
+      </header>
       <Navbar />
       <main>
         <Outlet />

@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+// component
 import Carousel from '../components/Carousel/Carousel.jsx';
-import Func from '../components/Func';
+import SubCarousel from '../components/Carousel/SubCarousel.jsx';
+import Func from '../components/Func.jsx';
 // css file 
 import main from './Home.module.css'; 
 export default function Home() {
@@ -22,7 +24,9 @@ export default function Home() {
         <div className={main.carousel}>
             <Carousel />
         </div>
-        <div className={main.dictionary}>5</div>
+        <div className={main.dictionary}>
+          <SubCarousel />
+        </div>
     </div>
   )
 }

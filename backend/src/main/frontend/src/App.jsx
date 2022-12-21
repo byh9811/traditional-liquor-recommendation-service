@@ -24,6 +24,9 @@ const router = createBrowserRouter([
       {
         path : '/shops' , element : <h2>SHOPS</h2>
       },
+      {
+        path : 'drinks/:id', element : <h2>DRINKS</h2>
+      }
     ]
   },
 
