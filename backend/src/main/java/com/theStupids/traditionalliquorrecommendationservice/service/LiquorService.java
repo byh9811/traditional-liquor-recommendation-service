@@ -1,9 +1,14 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
+import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorCarouselDTO;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorListDTO;
+import com.theStupids.traditionalliquorrecommendationservice.dto.service.LiquorSearchServiceDTO;
 import com.theStupids.traditionalliquorrecommendationservice.repository.LiquorRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,5 +24,9 @@ public class LiquorService {
 
     public List<LiquorCarouselDTO> getCarouselLiquor() {
         return liquorRepository.findTop3ByOrderByIdAsc().stream().map(i -> new LiquorCarouselDTO(i.getId(), i.getTitle(), i.getImg())).toList();
+    }
+
+    public Page<LiquorList> getLiquorList(LiquorSearchServiceDTO dto) {
+        return liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
     }
 }
