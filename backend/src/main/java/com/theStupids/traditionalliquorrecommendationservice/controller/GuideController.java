@@ -15,7 +15,16 @@ public class GuideController {
 
     @GetMapping("/drink-guides")
     public List<Guide> getGuideList() {
-
+        GuideResponse response = new GuideResponse();
+        Status status = new Status();
+        try {
+            response.setData(guideService.getGuideList());
+            status.setSuccess();
+            response.setStatus(status);
+        } catch (Exception e) {
+            status.setFail();
+            response.setStatus(status);
+        }
         return guideService.getGuideList();
     }
 }
