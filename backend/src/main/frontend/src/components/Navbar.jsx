@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav>
       <ul className={nav.lists}>
-        
+        {/* 여기까지 */}
         <List 
         id = "1"
         icon = { faHeart }

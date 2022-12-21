@@ -1,5 +1,5 @@
 nav {
-    
+
 }
 .link {
     display : block;
@@ -9,9 +9,11 @@ nav {
     /* border : 1px solid black; */
     /* background-color: palegreen; */
     list-style-type: none;
-    height : 60%;
+    height : 70%;
     display : flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    /* border : 3px solid black; */
+    padding : 10% 0 0 0;
 }

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import Test from './pages/Test';
+import Shop from './pages/Shop';
 
 const router = createBrowserRouter([
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         path : '/all/index' , element : <h2>ALL</h2>
       },
       {
-        path : '/shops' , element : <h2>SHOPS</h2>
+        path : '/shops' , element : <Shop />
       },
       {
         path : 'drinks/:id', element : <h2>DRINKS</h2>
