@@ -4,40 +4,18 @@ import shop from './Shop.module.css';
 
 import Area from '../components/Area';
 export default function Shop() {
+  let area = ['seoul','gyeonggi','inchon','chungcheong','busan','gyeongsang','jeolla','jeju'];
+  let areaUrl = ['/shops/seoul','/shops/gyeonggi','/shops/inchon','/shops/chungcheong','/shops/busan','/shops/gyeongsang','/shops/jeolla','/shops/jeju'];
+  let key = [1,2,3,4,5,6,7,8];
   return (
     <div className={shop.shop__wrapper}>
-        <Area 
-        areaUrl = "/shop/seoul"
-        areaName = "SEOUL" 
-        />
-        <Area 
-        areaUrl = "/shop/gyeonggi"
-        areaName = "GYEONGGI" 
-        />
-        <Area 
-        areaUrl = "/shop/inchon"
-        areaName = "INCHON" 
-        />
-        <Area 
-        areaUrl = "/shop/chungcheong"
-        areaName = "CHUNCHEONG" 
-        />
-        <Area 
-        areaUrl = "/shop/busan"
-        areaName = "BUSAN" 
-        />
-        <Area 
-        areaUrl = "/shop/gyeongsang"
-        areaName = "GYEONGSANG" 
-        />
-        <Area 
-        areaUrl = "/shop/jeolla"
-        areaName = "JEOLLA" 
-        />
-        <Area 
-        areaUrl = "/shop/jeju"
-        areaName = "JEJU" 
-        />
+      {
+        area.map((value, index) => <Area
+        key = { key[index] }
+        areaUrl = { areaUrl[index] }
+        areaName = { value }
+        />)
+      }
     </div>
   )
 }

@@ -11,7 +11,7 @@ export default function Home() {
     <div className={main.main__wrapper}>
         <Func 
           linkUrl="/test/index"
-          img = "/img/test.png"
+          img = "/img/test-removebg-preview.png"
         />
         <Func 
           linkUrl="/all/index"
@@ -19,7 +19,7 @@ export default function Home() {
         />
         <Func 
           linkUrl="/shops"
-          img = "/img/shop.png"
+          img = "/img/shop-removebg-preview.png"
         />
         <div className={main.carousel}>
             <Carousel />
