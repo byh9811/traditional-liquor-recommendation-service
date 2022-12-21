@@ -15,7 +15,7 @@ public class GuideController {
 
     @GetMapping("/drink-guides")
     public List<Guide> getGuideList() {
-        GuideResponse response = new GuideResponse();
+        BaseResponse response = new BaseResponse();
         Status status = new Status();
         try {
             response.setData(guideService.getGuideList());
