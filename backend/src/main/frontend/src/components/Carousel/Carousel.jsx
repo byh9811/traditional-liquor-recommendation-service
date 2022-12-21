@@ -19,24 +19,16 @@ export default function Carousel() {
   }
   useEffect(() => {
     getData();
-    
+    // 함수만을 return할 수 있음.
   }, [])
-  console.log(drinkData);
+  
   return (
     <div className={carousel.carousel__wrapper}>
         {/* <div className="item"></div>
         <div className="item"></div>
         <div className="item"></div> */}
         <p>
-          {drinkData[0].name}
-        </p>
-        <p>
-        {drinkData[1].name}
-
-        </p>
-        <p>
-        {drinkData[2].name}
-
+          
         </p>
     </div>
   )
