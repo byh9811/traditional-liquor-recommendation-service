@@ -4,6 +4,7 @@ import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
 import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorCarouselDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorListDTO;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorRecommendDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.service.LiquorSearchServiceDTO;
 import com.theStupids.traditionalliquorrecommendationservice.repository.LiquorRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,5 +29,9 @@ public class LiquorService {
 
     public Page<LiquorList> getLiquorList(LiquorSearchServiceDTO dto) {
         return liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
+    }
+
+    public List<LiquorRecommendDTO> getRecommendLiquor(List<Integer> answer) {
+        return liquorRepository.findClosest(answer.get(0), answer.get(1), answer.get(2), answer.get(3)).stream().map(l -> new LiquorRecommendDTO(l.getId(), l.getTitle(), l.getImg())).toList();
     }
 }

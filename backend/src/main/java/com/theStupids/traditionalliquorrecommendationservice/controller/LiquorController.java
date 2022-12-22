@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -70,6 +71,21 @@ public class LiquorController {
             status.setFail();
             response.setStatus(status);
         }
+
+        return response;
+    }
+
+    @GetMapping("/drinks/recommendation")
+    public BaseResponse getRecommendationLiquor(@RequestParam("answer[]") List<Integer> answer) {
+        BaseResponse response = new BaseResponse();
+        Status status = new Status();
+        try {
+            response.setData(liquorService.getRecommendLiquor(answer));
+            status.setSuccess();
+        } catch (Exception e) {
+            status.setFail();
+        }
+        response.setStatus(status);
 
         return response;
     }
