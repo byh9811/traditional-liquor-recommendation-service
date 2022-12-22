@@ -112,6 +112,7 @@
     - code: Integer
     - message: String
   - data (Array)
+    - id: Integer
     - questions: String
 
 ### 취향 테스트 수행

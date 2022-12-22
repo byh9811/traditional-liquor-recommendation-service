@@ -16,7 +16,7 @@ public class GuideController {
     final GuideService guideService;
 
     @GetMapping("/guides")
-    public List<Guide> getGuideList() {
+    public BaseResponse getGuideList() {
         BaseResponse response = new BaseResponse();
         Status status = new Status();
         try {
@@ -27,6 +27,6 @@ public class GuideController {
             status.setFail();
             response.setStatus(status);
         }
-        return guideService.getGuideList();
+        return response;
     }
 }
