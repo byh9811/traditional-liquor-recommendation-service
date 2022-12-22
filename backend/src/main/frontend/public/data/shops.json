@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "전통주 shop1",
+        "address" : "address",
+        "tel" : "010-xxxx-xxxx",
+        "menu" : "메뉴",
+        "link" : "Link"
+    },
+    {
+        "id" : 2,
+        "name" : "전통주 shop2",
+        "address" : "address",
+        "tel" : "010-xxxx-xxxx",
+        "menu" : "메뉴",
+        "link" : "Link"
+    },
+    {
+        "id" : 3,
+        "name" : "전통주 shop3",
+        "address" : "address",
+        "tel" : "010-xxxx-xxxx",
+        "menu" : "메뉴",
+        "link" : "Link"
+    }
+]

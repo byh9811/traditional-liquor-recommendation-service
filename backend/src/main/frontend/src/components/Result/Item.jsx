@@ -19,7 +19,7 @@ export default function Item({ key, title, price, volume, type, alcohol, food })
         <ItemProperty 
         className = "item.title"
         property= "title"
-        value = {title}
+        value = { title }
         // value는 이제 result에서 props로 전달해줄거야!
         />
         <ItemProperty 
