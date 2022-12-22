@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class StoreController {
     final StoreService storeService;
 
-    @GetMapping("/drink-stores")
+    @GetMapping("/stores")
     public PagingResponse getStores(@RequestParam("areaName") String areaName, @RequestParam("page") int page) {
         PagingResponse response = new PagingResponse();
         Status status = new Status();

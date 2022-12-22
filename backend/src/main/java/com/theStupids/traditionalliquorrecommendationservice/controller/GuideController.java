@@ -15,7 +15,7 @@ import java.util.List;
 public class GuideController {
     final GuideService guideService;
 
-    @GetMapping("/drink-guides")
+    @GetMapping("/guides")
     public List<Guide> getGuideList() {
         BaseResponse response = new BaseResponse();
         Status status = new Status();

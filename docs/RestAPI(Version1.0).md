@@ -6,7 +6,7 @@
 
 ### 메인 페이지 메인 캐러셀에 표시될 전통주 조회
 
-- URI: GET /main-carousel
+- URI: GET /drinks/main-carousel
 - Response
   - status
     - code: Integer
@@ -67,7 +67,7 @@
 
 ### 지역별 전통주점 검색
 
-- URI: GET /drink-stores
+- URI: GET /stores
 - Request
   - areaName: String
   - page: Integer
@@ -92,7 +92,7 @@
 
 ### 메인 페이지 서브 캐러셀에 표시될 전통주 용어사전
 
-- URI: GET /drink-guides
+- URI: GET /guides
 - Response
   - status
     - code: Integer
@@ -116,11 +116,14 @@
 
 ### 취향 테스트 수행
 
-- URI: GET /flavor-type
+- URI: GET /drinks/recommendation
 - Request
-  - response: Array (String)
+  - answer: Array (String)
 - Response
   - status
     - code: Integer
     - message: String
-  - data
+  - data (Array)
+    - id: Integer
+    - img: String
+    - title: String

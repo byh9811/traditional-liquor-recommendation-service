@@ -40,7 +40,7 @@ public class LiquorController {
         return response;
     }
 
-    @GetMapping("/main-carousel")
+    @GetMapping("/drinks/main-carousel")
     public BaseResponse getCarouselLiquor() {
         BaseResponse response = new BaseResponse();
         Status status = new Status();
