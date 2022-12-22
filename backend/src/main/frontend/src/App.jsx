@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Test from './pages/Test';
 import Shop from './pages/Shop';
 import DrinkResult from './pages/DrinkResult'; 
+import DrinkDetail from './pages/DrinkDetail';
 
 const router = createBrowserRouter([
 
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
         path : '/shops/:area', element : <h2>shop 지역페이지</h2>
       },
       {
-        path : 'drinks/:id', element : <DrinkResult />
+        path : '/drinks/:id', element : <DrinkDetail />
+      },
+      {
+        path : `/drinks`, element : <DrinkResult/>
       }
     ]
   },

@@ -1,12 +1,12 @@
 /* 음 전체 레이아웃은 부모 css에서 잡아주는게 좋음 */
 .item {
     display : grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr;
+    grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr;
     grid-template-rows: repeat(2, 1fr);
     grid-gap : 1vh;
     grid-template-areas: 
-    "img title type"
-    "img food flavorType";
+    "img title volume alcohol"
+    "img price type food";
     padding : 2% 2%;
     border-radius : 10px;
 }
@@ -22,16 +22,26 @@
 }
 .title {
     grid-area: title;
+    /* 이름이 너무 길면 한 줄로 ... 라고 표현해줘야 됨 */
+    white-space: nowrap; 
+    /* 글자는 너비를 넘으면 자동으로 다음 라인으로 넘어가는데, 이를 방지해준다. */
+}
+.price {
+    grid-area: price;
+}
+.volume {
+    grid-area: volume;
 }
 .type {
     grid-area: type;
 }
+.alcohol {
+    grid-area: alcohol;
+}
 .food {
     grid-area: food;
 }
-.flavor__tyoe {
-    grid-area: flavorType;
-}
+
 /* 모든 프로퍼티 css */
 .property {
     display : flex;
@@ -51,6 +61,14 @@
     font-style : italic;
 }
 .property > .val {
+    width : 90%;
+    margin : 0 auto;
+    text-align: center;
+    /* border : 1px solid black; */
+    padding : 0 0 5px 0;
+    overflow: hidden;
     font-size : 1.1rem;
     font-weight : 700;
+    white-space: nowrap; 
+    text-overflow:ellipsis;
 }

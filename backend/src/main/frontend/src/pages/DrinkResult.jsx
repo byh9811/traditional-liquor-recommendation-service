@@ -36,9 +36,11 @@ export default function DrinkResult() {
               <Item 
                 key = {value.key}
                 title = {value.title}
+                price = {value.price}
+                volume = {value.volume}
                 type = {value.type}
+                alcohol = {value.alcohol}
                 food = {value.food}
-                flavorType = {value.flavorType}
               />
             )
           }
