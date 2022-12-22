@@ -17,7 +17,7 @@ public class TypeController {
     final TypeService typeService;
     //술 취향 테스트 페이지
     @GetMapping("/questions")
-    public List<Type> getTypeList() {
+    public BaseResponse getTypeList() {
         BaseResponse response = new BaseResponse();
         Status status = new Status();
         try {
@@ -28,7 +28,7 @@ public class TypeController {
             status.setFail();
             response.setStatus(status);
         }
-        return typeService.getTypeList();
+        return response;
     }
 
 }
