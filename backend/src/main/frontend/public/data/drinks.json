@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "title" : "막걸리1",
+        "type" : "3번타입",
+        "food" : "고기, 회",
+        "flavorType" : 3
+    },
+    {
+        "id" : 2,
+        "title" : "싱싱한 막걸리입니다",
+        "type" : "4번타입",
+        "food" : "고기, 회",
+        "flavorType" : 1
+    },
+    {
+        "id" : 3,
+        "title" : "단맛이 강한 막걸리",
+        "type" : "2번타입",
+        "food" : "햄버거, 피자",
+        "flavorType" : 2
+    },
+    {
+        "id" : 4,
+        "title" : "먹지마 막걸리",
+        "type" : "1번타입",
+        "food" : "순두부, 김치",
+        "flavorType" : 4
+    }
+]

@@ -1,0 +1,56 @@
+/* 음 전체 레이아웃은 부모 css에서 잡아주는게 좋음 */
+.item {
+    display : grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap : 1vh;
+    grid-template-areas: 
+    "img title type"
+    "img food flavorType";
+    padding : 2% 2%;
+    border-radius : 10px;
+}
+.item > *:not(.img){
+    /* ❗️img태그만 제외하고❗️ */
+    /* border : 1px solid black; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.img {
+    grid-area: img;
+    /* border : 1px solid black; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.title {
+    grid-area: title;
+}
+.type {
+    grid-area: type;
+}
+.food {
+    grid-area: food;
+}
+.flavor__tyoe {
+    grid-area: flavorType;
+}
+/* 모든 프로퍼티 css */
+.property {
+    display : flex;
+    flex-direction: column;
+    border-radius : 10px;
+}
+.property > *{
+    flex-grow : 1;
+    /* border : 1px solid black; */
+    text-align: center;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.property > .props {
+    color : gray;
+    font-style : italic;
+}
+.property > .val {
+    font-size : 1.1rem;
+    font-weight : 700;
+}

@@ -23,7 +23,10 @@
     overflow-y: scroll;
     display : grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, 100px);
+    grid-auto-rows: minmax(140px, 140px);
+    /* 이렇게 높이를 고정해놓으면 몇 개가 동적으로 오더라도
+    layout을 유지한 채로 사용이 가능하다.
+    */
     grid-gap : 1vh;
     padding : 2% 4%;
 
