@@ -1,10 +1,9 @@
-package com.example.drink.controller;
+package com.theStupids.traditionalliquorrecommendationservice.controller;
 
-import com.example.drink.domain.Type;
-import com.example.drink.dto.controller.response.BaseResponse;
-import com.example.drink.dto.controller.response.GuideResponse;
-import com.example.drink.dto.controller.response.Status;
-import com.example.drink.service.TypeService;
+import com.theStupids.traditionalliquorrecommendationservice.domain.Type;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.BaseResponse;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.Status;
+import com.theStupids.traditionalliquorrecommendationservice.service.TypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;

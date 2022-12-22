@@ -1,6 +1,8 @@
 package com.theStupids.traditionalliquorrecommendationservice.controller;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Guide;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.BaseResponse;
+import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.Status;
 import com.theStupids.traditionalliquorrecommendationservice.service.GuideService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

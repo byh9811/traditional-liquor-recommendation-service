@@ -1,7 +1,7 @@
-package com.example.drink.service;
+package com.theStupids.traditionalliquorrecommendationservice.service;
 
-import com.example.drink.domain.Type;
-import com.example.drink.repository.TypeRepository;
+import com.theStupids.traditionalliquorrecommendationservice.domain.Type;
+import com.theStupids.traditionalliquorrecommendationservice.repository.TypeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

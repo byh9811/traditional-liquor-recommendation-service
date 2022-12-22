@@ -1,4 +1,4 @@
-package com.example.drink.dto.controller.data;
+package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
 import lombok.Data;
 

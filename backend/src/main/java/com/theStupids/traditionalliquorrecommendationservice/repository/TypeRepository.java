@@ -1,7 +1,6 @@
-package com.example.drink.repository;
+package com.theStupids.traditionalliquorrecommendationservice.repository;
 
-import com.example.drink.domain.Guide;
-import com.example.drink.domain.Type;
+import com.theStupids.traditionalliquorrecommendationservice.domain.Type;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

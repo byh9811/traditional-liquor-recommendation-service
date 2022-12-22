@@ -1,9 +1,8 @@
-package com.example.drink.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
 
 @Entity(name = "types")
 @Getter
