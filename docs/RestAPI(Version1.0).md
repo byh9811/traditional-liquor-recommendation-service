@@ -11,7 +11,7 @@
   - status
     - code: Integer
     - message: String
-  - data
+  - data (Array)
     - id: Integer
     - img: String
     - title: String
@@ -22,12 +22,11 @@
 - Request
   - search: String
   - page: Integer
-  - sort: Integer
 - Response
   - status
     - code: Integer
     - message: String
-  - data
+  - data (Array)
     - id: Integer
     - img: String
     - title: String
@@ -76,7 +75,7 @@
   - status
     - code: Integer
     - message: String
-  - data
+  - data (Array)
     - id: Integer
     - name: String
     - address: String
@@ -98,10 +97,10 @@
   - status
     - code: Integer
     - message: String
-  - data
+  - data (Array)
     - id: Integer
-    - keyword: Array (String)
-    - meaning: Array (String)
+    - keyword: String
+    - meaning: String
 
 ## 4. 전통주 취향 질문
 
@@ -112,8 +111,8 @@
   - status
     - code: Integer
     - message: String
-  - data
-    - questions: Array (String)
+  - data (Array)
+    - questions: String
 
 ### 취향 테스트 수행
 
