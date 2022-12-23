@@ -7,7 +7,7 @@ import List from './Nav/List';
 import nav from './Navbar.module.css';
 
 // font-awsome
-import { faHouseUser, faWineBottle, faHeart, faShop } from "@fortawesome/free-solid-svg-icons";
+import { faNoteSticky, faWineBottle, faHeart, faShop } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar() {
@@ -19,25 +19,25 @@ export default function Navbar() {
         id = "1"
         icon = { faHeart }
         url = "/"
-        linkName = "home"
+        linkName = "HOM2"
         />
         <List 
         id = "2"
-        icon = { faWineBottle }
+        icon = { faNoteSticky }
         url = "/test/index"
-        linkName = "test"
+        linkName = "T2ST"
         />
         <List 
         id = "3"
         icon = { faWineBottle }
         url = "/all/index"
-        linkName = "Drinks"
+        linkName = "DRINK5"
         />
         <List 
         id = "4"
         icon = { faShop }
         url = "/shops"
-        linkName = "SHOP"
+        linkName = "5HOP"
         />
       </ul>
     </nav>
