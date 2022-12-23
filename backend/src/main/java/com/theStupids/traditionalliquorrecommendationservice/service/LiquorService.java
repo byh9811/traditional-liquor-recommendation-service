@@ -31,7 +31,7 @@ public class LiquorService {
         return liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
     }
 
-    public List<LiquorRecommendDTO> getRecommendLiquor(List<Integer> answer) {
-        return liquorRepository.findClosest(answer.get(0), answer.get(1), answer.get(2), answer.get(3)).stream().map(l -> new LiquorRecommendDTO(l.getId(), l.getTitle(), l.getImg())).toList();
+    public List<LiquorRecommendDTO> getRecommendLiquor(int[] answer) {
+        return liquorRepository.findClosest(answer[0], answer[1], answer[2], answer[3]).stream().map(l -> new LiquorRecommendDTO(l.getId(), l.getTitle(), l.getImg())).toList();
     }
 }

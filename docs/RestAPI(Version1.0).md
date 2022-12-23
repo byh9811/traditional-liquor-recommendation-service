@@ -119,7 +119,7 @@
 
 - URI: GET /drinks/recommendation
 - Request
-  - answer: Array (Integer)
+  - answer: String
 - Response
   - status
     - code: Integer

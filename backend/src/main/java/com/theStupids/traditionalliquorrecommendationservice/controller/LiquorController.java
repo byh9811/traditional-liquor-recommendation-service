@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -76,11 +77,11 @@ public class LiquorController {
     }
 
     @GetMapping("/drinks/recommendation")
-    public BaseResponse getRecommendationLiquor(@RequestParam("answer[]") List<Integer> answer) {
+    public BaseResponse getRecommendationLiquor(@RequestParam("answer") String answer) {
         BaseResponse response = new BaseResponse();
         Status status = new Status();
         try {
-            response.setData(liquorService.getRecommendLiquor(answer));
+            response.setData(liquorService.getRecommendLiquor(Arrays.stream(answer.split(",")).mapToInt(Integer::parseInt).toArray()));
             status.setSuccess();
         } catch (Exception e) {
             status.setFail();
