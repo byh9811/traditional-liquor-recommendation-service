@@ -13,6 +13,6 @@ public class Type {
     private int id;
 
     @Column(nullable = false, unique = true)
-    private String questions;
+    private String question;
 
 }

@@ -113,7 +113,7 @@
     - message: String
   - data (Array)
     - id: Integer
-    - questions: String
+    - question: String
 
 ### 취향 테스트 수행
 
