@@ -7,9 +7,9 @@ import java.util.List;
 @Data
 public class TypeDTO {
     private int id;
-    private List<String> question;
+    private String question;
 
-    public TypeDTO(List<String> question) {
-        this.question = question;
+    public TypeDTO(Type type) {
+        this.question = type.getQuestion();
     }
 }
