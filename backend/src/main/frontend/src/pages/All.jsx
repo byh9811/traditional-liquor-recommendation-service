@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function All() {
   return (
-    <div>All</div>
+    <div>
+        <h2>ALL</h2>
+    </div>
   )
 }

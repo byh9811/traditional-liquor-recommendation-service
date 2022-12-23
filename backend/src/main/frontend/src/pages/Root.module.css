@@ -20,8 +20,8 @@ body {
     background-color: var(--color-bg);
 }
 .container {
-    width : 85vw;
-    height : 90vh;
+    width : 90vw;
+    height : 80vh;
     /* border : 3px solid black; */
     box-shadow: var(--box-radius);
     border-radius : 20px;

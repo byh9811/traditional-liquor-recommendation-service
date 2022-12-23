@@ -1,0 +1,63 @@
+.content__wrapper {
+    width : 70%;
+    height : 80%;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    display : grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "company company company company"
+    "title title title type"
+    "price price price volume"
+    "alcohol alcohol alcohol alcohol"
+    "sweet sour bodies cool"
+    "material material material material"
+    "food food food food";
+    grid-gap : 1vh 1vw;
+    padding : 2% 2%;
+    
+}
+.content__wrapper > *{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.content__company{
+    grid-area: company;
+}
+.content__title{
+    grid-area: title;
+    font-size : 1.2rem;
+    color : red;
+    font-style : italic;
+}
+.content__type{
+    grid-area: type;
+}
+.content__price{
+    grid-area: price;
+    font-size : 1.3rem;
+    color : blue;
+}
+.content__volume{
+    grid-area: volume;
+}
+.content__alcohol{
+    grid-area: alcohol;
+}
+.content__sweet{
+    grid-area: sweet;
+}
+.content__sour{
+    grid-area: sour;
+}
+.content__body{
+    grid-area: bodies;
+}
+.content__cool{
+    grid-area: cool;
+}
+.content__food{
+    grid-area: food;
+}
+.content__material{
+    grid-area: material;
+}
