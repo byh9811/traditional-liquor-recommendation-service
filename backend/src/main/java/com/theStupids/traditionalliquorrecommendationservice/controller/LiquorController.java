@@ -63,8 +63,8 @@ public class LiquorController {
         PagingResponse response = new PagingResponse();
         Status status = new Status();
         try {
-            Page<LiquorList> liquorPage = liquorService.getLiquorList(new LiquorSearchServiceDTO(keyword, page-1, 10));
-            response.setData(liquorPage.get().map(l -> new LiquorListDTO(l, new ArrayList<>())).toList());
+            Page<LiquorListDTO> liquorPage = liquorService.getLiquorList(new LiquorSearchServiceDTO(keyword, page-1, 10));
+            response.setData(liquorPage.get());
             response.setPageData(new PageData(liquorPage.getTotalPages(), liquorPage.getNumber(), liquorPage.getTotalElements()));
             status.setSuccess();
             response.setStatus(status);

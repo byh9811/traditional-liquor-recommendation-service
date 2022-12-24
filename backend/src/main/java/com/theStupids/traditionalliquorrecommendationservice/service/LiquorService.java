@@ -6,6 +6,7 @@ import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorListDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorRecommendDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.service.LiquorSearchServiceDTO;
+import com.theStupids.traditionalliquorrecommendationservice.repository.FoodRepository;
 import com.theStupids.traditionalliquorrecommendationservice.repository.LiquorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -18,6 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LiquorService {
     final LiquorRepository liquorRepository;
+    final FoodRepository foodRepository;
 
     public Liquor getLiquor(int id) {
         return liquorRepository.findById(id);
@@ -27,8 +29,10 @@ public class LiquorService {
         return liquorRepository.findTop3ByOrderByIdAsc().stream().map(i -> new LiquorCarouselDTO(i.getId(), i.getTitle(), i.getImg())).toList();
     }
 
-    public Page<LiquorList> getLiquorList(LiquorSearchServiceDTO dto) {
-        return liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
+    public Page<LiquorListDTO> getLiquorList(LiquorSearchServiceDTO dto) {
+        Page<LiquorList> liquorPage = liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
+        Page<LiquorListDTO> liquorDTOPage = liquorPage.map(l -> new LiquorListDTO(l, foodRepository.findAnju(l.getId())));
+        return liquorDTOPage;
     }
 
     public List<LiquorRecommendDTO> getRecommendLiquor(int[] answer) {
