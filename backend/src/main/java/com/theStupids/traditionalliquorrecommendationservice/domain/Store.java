@@ -20,6 +20,6 @@ public class Store {
     @Column(unique = true)
     private String tel;
 
-    @Column
+    @Column(unique = true)
     private String link;
 }
