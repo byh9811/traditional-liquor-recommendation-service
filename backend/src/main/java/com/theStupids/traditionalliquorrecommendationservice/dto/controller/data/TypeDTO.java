@@ -1,8 +1,7 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
+import com.theStupids.traditionalliquorrecommendationservice.domain.Type;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class TypeDTO {
