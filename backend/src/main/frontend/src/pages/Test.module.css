@@ -5,4 +5,128 @@
     width : 100%;
     height : 100%;
     /* background-color: azure; */
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "title title title"
+    "form form result";
+    border : 2px solid black;
+}
+.test__wrapper > *{
+    border : 2px solid black;
+}
+.test__title {
+    grid-area: title;
+}
+
+/* 설문조사! */
+.test__form {
+    grid-area: form;
+    overflow-x: scroll;
+}
+.test__form > form {
+    width : 400%;
+    height : 100%;
+    /* background-color: palegreen; */
+    display : flex;
+}
+.test__form .question__wrapper {
+    flex-grow : 1;
+    height : 100%;
+    /* border : 7px solid black; */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.question__wrapper > .test__box {
+    width : 60%;
+    height : 80%;
+    box-shadow: rgb(204, 219, 232) 5px 5px 8px 2px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius : 20px;
+    display : flex;
+    flex-direction: column;
+}
+.test__box > * {
+    /* border : 1px solid black; */
+}
+.test__box > .test__question {
+    height : 20%;
+    font-size : 0.9rem;
+    font-weight : 700;
+    color : gray;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.test__box > .test__answer {
+    position : relative; /* 버튼 absolute위해서 */
+    height : 80%;
+    /* border : 1px solid black; */
+    display : flex; /* 4개의 p 세로로 flex */
+    flex-direction: column;
+
+}
+.test__answer > .button {
+    position : absolute;
+    top : 40%;
+    right : 10px;
+    transform : translateY(-50%);
+    width : 100px;
+    height : 35px;
+    /* border : 1px solid black; */
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: none;
+    outline : none;
+    border-radius : 10px;
+    cursor : pointer;
+}
+.test__answer > .button:hover {
+    background-color: aliceblue;
+}
+.test__answer > p {
+    flex-grow : 1;
+    width : 100%;
+    /* border : 2px solid black; */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 답변 radio button */
+p > input[type="radio"] {
+    display : none;
+}
+p > input[type="radio"] + label {
+    display : block;
+    width : 150px;
+    height : 50px;
+    /* border : 2px solid black; */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    cursor : pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius : 10px;
+    font-size : 0.9rem;
+    font-weight : 800;
+    font-style : italic;
+    color : black
+}
+p > input[type="radio"] + label:hover {
+    background-color: azure;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+p > label {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+p > input[type="radio"]:checked + label {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    
+}
+
+
+.test__result {
+    grid-area: result;
 }
