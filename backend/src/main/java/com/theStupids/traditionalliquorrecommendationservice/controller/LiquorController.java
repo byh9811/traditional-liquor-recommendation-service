@@ -31,7 +31,7 @@ public class LiquorController {
         BaseResponse response = new BaseResponse();
         Status status = new Status();
         try {
-            response.setData(new LiquorDetailDTO(liquorService.getLiquor(id), new ArrayList<>()));
+            response.setData(liquorService.getLiquor(id));
             status.setSuccess();
             response.setStatus(status);
         } catch (Exception e) {

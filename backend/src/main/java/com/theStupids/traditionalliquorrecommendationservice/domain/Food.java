@@ -1,8 +1,10 @@
 package com.theStupids.traditionalliquorrecommendationservice.domain;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
-@Entity
+@Entity(name = "food")
+@Data
 public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
