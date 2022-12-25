@@ -2,25 +2,33 @@
     {
         "id" : 1,
         "name" : "전통주 shop1",
-        "address" : "address",
+        "address" : "address1",
         "tel" : "010-xxxx-xxxx",
         "menu" : "메뉴",
-        "link" : "Link"
+        "link" : "식당링크1"
     },
     {
         "id" : 2,
         "name" : "전통주 shop2",
-        "address" : "address",
+        "address" : "address2",
         "tel" : "010-xxxx-xxxx",
         "menu" : "메뉴",
-        "link" : "Link"
+        "link" : "식당링크2"
     },
     {
         "id" : 3,
         "name" : "전통주 shop3",
-        "address" : "address",
+        "address" : "address3",
         "tel" : "010-xxxx-xxxx",
         "menu" : "메뉴",
-        "link" : "Link"
+        "link" : "식당링크3"
+    },
+    {
+        "id" : 4,
+        "name" : "전통주 shop4",
+        "address" : "address4",
+        "tel" : "010-xxxx-xxxx",
+        "menu" : "메뉴",
+        "link" : "식당링크4"
     }
 ]

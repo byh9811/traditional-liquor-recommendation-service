@@ -8,6 +8,7 @@ import Test from './pages/Test';
 import Shop from './pages/Shop';
 import DrinkResult from './pages/DrinkResult'; 
 import DrinkDetail from './pages/DrinkDetail';
+import ShopDetail from './components/Shops/ShopDetail';
 
 const router = createBrowserRouter([
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         path : '/shops' , element : <Shop />
       },
       {
-        path : '/shops/:area', element : <h2>shop 지역페이지</h2>
+        path : '/shops/:area', element : <ShopDetail />
       },
       {
         path : '/drinks/:id', element : <DrinkDetail />

@@ -1,0 +1,51 @@
+:root{
+
+}
+.detail__wrapper {
+    position : relative;
+    width : 100%;
+    height : 100%;
+    /* border : 5px solid black; */
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop__wrapper {
+    overflow-y: scroll;
+    height : 90%;
+    width : 90%;
+    box-shadow : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius : 10px;
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(35%, 35%);
+    grid-gap : 1vh 1vw;
+    padding : 5% 5%;
+}
+/* shop주점 wrapper(여기 안에 content들어감.) */
+.shop__wrapper > .shop__card {
+    box-shadow : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius : 10px;
+    overflow-y: scroll;
+}
+.shop__content {
+    text-align: center;
+    /* border : 1px solid black; */
+    padding : 3% 0 0 0;
+}
+
+
+/* tablet pc가로 ~ desktop */
+@media screen and (max-width : 1100px) {
+    .shop__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* tablet pc세로 ~ mobile */
+@media screen and (max-width : 600px) {
+    .shop__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
