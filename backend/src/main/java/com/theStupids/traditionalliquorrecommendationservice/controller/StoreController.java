@@ -26,7 +26,7 @@ public class StoreController {
         PagingResponse response = new PagingResponse();
         Status status = new Status();
         try {
-            Page<Store> storePage = storeService.getStores(new StoreSearchServiceDTO(Region.valueOf(areaName).getKorean(), page-1, 20));
+            Page<Store> storePage = storeService.getStores(new StoreSearchServiceDTO(Region.valueOf(areaName).getExp(), page-1, 20));
             response.setData(storePage.get().map(s -> new StoreDTO(s, new ArrayList<>())).toList());
             response.setPageData(new PageData(storePage.getTotalPages(), storePage.getNumber(), storePage.getTotalElements()));
             status.setSuccess();

@@ -18,6 +18,6 @@ public class StoreService {
     }
 
     public Page<Store> getStores(StoreSearchServiceDTO dto) {
-        return storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegion());
+        return storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegionExp());
     }
 }
