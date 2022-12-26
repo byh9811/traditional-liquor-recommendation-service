@@ -4,7 +4,7 @@ import shop from './Shop.module.css';
 
 import Area from '../components/Area';
 export default function Shop() {
-  let area = ['seoul','gyeonggi','inchon','chungcheong','busan','gyeongsang','jeolla','jeju'];
+  let area = ['Seoul','Gyeonggi','Incheon','Chungcheong','busan','Gyeongsang','Jeolla','Jeju','Gangwon', 'Daejeon', 'Gwangju', 'Daegue', 'Ulsan', 'Sejong'];
   let areaUrl = ['/shops/seoul','/shops/gyeonggi','/shops/inchon','/shops/chungcheong','/shops/busan','/shops/gyeongsang','/shops/jeolla','/shops/jeju'];
   let key = [1,2,3,4,5,6,7,8];
   return (
