@@ -22,7 +22,13 @@ export default function Home() {
           img = "/img/shop-removebg-preview.png"
         />
         <div className={main.carousel}>
-            <Carousel />
+            <Carousel /> 
+            {/* 이 캐러셀이 움직이는거야!! => 저 컴포넌트가 움직이는거야 무조건! */}
+            <div className={main.carousel__paging}>
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
         </div>
         <div className={main.dictionary}>
           <SubCarousel />

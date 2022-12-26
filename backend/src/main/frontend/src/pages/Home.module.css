@@ -50,8 +50,24 @@
     border-radius : 20px;
 }
 .carousel {
+    position : relative;
     grid-area : carousel;
     overflow-x: scroll;
+}
+.carousel__paging {
+    position : absolute;
+    bottom : 5%;
+    left : 50%;
+    transform : translateX(-50%);
+    width : 30%;
+    height : 30px;
+    border : 2px solid black;
+    display : flex;
+}
+.carousel__paging > *{
+    flex-grow : 1;
+    border : 1px solid black;
+    font-size : 0.9rem;
 }
 .dictionary {
     grid-area: dictionary;

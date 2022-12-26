@@ -2,7 +2,7 @@ import React from 'react'
 import content from './Contentbox.module.css';
 import ContentElement from './ContentElement';
 
-export default function Contentbox() {
+export default function Contentbox({ title, company, type, price, volume, alcohol, sweet, sour, body, cool, food, material }) {
   return (
     <div className={ content.content__wrapper }>
         {/* 총 12개! */}
@@ -10,62 +10,62 @@ export default function Contentbox() {
         <ContentElement 
         className = { content.content__title }
         property = "title"
-        value = "기가막힌 전통주"
+        value = { title }
         /> 
        <ContentElement 
         className = { content.content__company }
         property = "company"
-        value = "회사1"
+        value = { company }
         /> 
         <ContentElement 
         className = {content.content__type}
         property = "type"
-        value = "타입"
+        value = { type }
         /> 
         <ContentElement 
         className = {content.content__price}
         property = "price"
-        value = "5000$"
+        value = { price }
         /> 
         <ContentElement 
         className = {content.content__volume}
         property = "volume"
-        value = "700ml"
+        value = { volume }
         /> 
         <ContentElement 
         className = {content.content__alcohol}
         property = "alcohol"
-        value = "도수"
+        value = { alcohol }
         /> 
         <ContentElement 
         className = {content.content__sweet}
         property = "sweet"
-        value = "단맛"
+        value = { sweet }
         /> 
         <ContentElement 
         className = {content.content__sour}
         property = "sour"
-        value = "신맛"
+        value = { sour }
         /> 
         <ContentElement 
         className = {content.content__body}
         property = "body"
-        value = "바디"
+        value = { body }
         /> 
         <ContentElement 
         className = {content.content__cool}
         property = "cool"
-        value = "청량감"
+        value = { cool }
         /> 
         <ContentElement 
         className = {content.content__food}
         property = "food"
-        value = "어울리는 음식"
+        value = { food }
         /> 
         <ContentElement 
         className = {content.content__matetial}
         property = "matetial"
-        value = "재료"
+        value = { material }
         /> 
     </div>
   )

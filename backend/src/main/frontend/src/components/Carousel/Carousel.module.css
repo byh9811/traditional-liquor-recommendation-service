@@ -1,10 +1,11 @@
 .carousel__wrapper {
+    /* position : relative; */
     width : 300%;
     height : 100%;
     display : flex;
 }
 .carousel__wrapper > .item {
     flex-grow : 1;
-    
-    border-right : 5px solid black;
+    border : 1px solid black;
+    /* border-right : 5px solid black; */
 }

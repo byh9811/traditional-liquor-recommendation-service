@@ -13,16 +13,19 @@ export default function DrinkResult() {
 
   async function getData() {
     try {
-      const response = await axios.get('/data/drinks.json');
-      const userId = response.data;
-      // userId.length로 반복문 돌리면 돼! 
-      setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
+      const response = await axios.get(`/drinks?search=${data}&page=1`)
+      .then((res) => {
+        console.log(res.data.data);
+        console.log(typeof res.data.data);
+        setData(res.data.data);
+      })
+      // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
     }catch(err) {
       console.log(err);
     }
   }
+  console.log(data);
   useEffect(() => {
-    console.log(data);
     getData();
   }, []); // 1번만 호출!
   return (
@@ -33,8 +36,9 @@ export default function DrinkResult() {
         <div className={result.result__items}>
           {
             data.map((value) => 
-              <Item 
-                key = {value.key}
+              <Item  
+              // 만약 Item을 click하는거면 Item component에다가 작성해주기!
+                id = {value.id}
                 title = {value.title}
                 price = {value.price}
                 volume = {value.volume}

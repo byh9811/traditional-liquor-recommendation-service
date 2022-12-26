@@ -6,14 +6,17 @@ import item from './Item.module.css'; // 객체로 모아준다!!
 import ItemProperty from './ItemProperty';
 // class이름은 약간 프로퍼티라고 생각하자!! 
 
-export default function Item({ key, title, price, volume, type, alcohol, food }) {
+export default function Item({ id, title, price, volume, type, alcohol, food }) {
     const navigate = useNavigate();
-    function goDetail({ key }) {
-      navigate(`/drinks/${key}`); // ❗️ detail page로 이동 ❗️
+    function goDetail(id, title) {
+      console.log(typeof id);
+      navigate(`/drinks/${id}`); // ❗️ detail page로 이동 => 갈 때 id넘겨줘야돼!! ❗️
     }
   return (
-    <div className={`${result.item} ${item.item}`} key={ key }
-    onClick = { goDetail }
+    <li className={`${result.item} ${item.item}`} key = { id }
+    onClick = { () => {
+      goDetail(id, title);
+    } }
     >
         <div className={item.img}>1</div>
         <ItemProperty 
@@ -47,6 +50,6 @@ export default function Item({ key, title, price, volume, type, alcohol, food })
         property= "food"
         value = { food }
         />
-    </div>
+    </li>
   )
 }

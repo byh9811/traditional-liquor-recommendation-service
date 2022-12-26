@@ -13,8 +13,10 @@ export default function Search() {
     const handleSubmit = (e) => {
         e.preventDefault(); // 새로고침 방지! 
         setText(''); // 빈 문자열로 새로고침
-        navigate(`/drinks?title=${text}`);
+        console.log(text);
+        navigate(`/drinks?search=${text}&page=1`); // 페이지 이동!
     }
+    // 보내주는거까지...!!
   return (
     <form onSubmit={ handleSubmit }>
         <input 
