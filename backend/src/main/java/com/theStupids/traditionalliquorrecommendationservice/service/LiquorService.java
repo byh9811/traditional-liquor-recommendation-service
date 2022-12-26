@@ -32,7 +32,7 @@ public class LiquorService {
     }
 
     public Page<LiquorListDTO> getLiquorList(LiquorSearchServiceDTO dto) {
-        Page<LiquorList> liquorPage = liquorRepository.findByTitleContaining(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
+        Page<LiquorList> liquorPage = liquorRepository.findByTitleContains(dto.getKeyword(), PageRequest.of(dto.getCurPage(), dto.getPageSize()));
         return liquorPage.map(l -> new LiquorListDTO(l, foodRepository.findAnju(l.getId()).stream().map(Food::getName).toList()));
     }
 

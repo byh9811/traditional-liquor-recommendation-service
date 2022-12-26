@@ -18,7 +18,7 @@ public interface LiquorRepository extends JpaRepository<Liquor, Integer> {
 
     List<LiquorCarousel> findTop3ByOrderByIdAsc();
 
-    Page<LiquorList> findByTitleContaining(String keyword, Pageable pageable);
+    Page<LiquorList> findByTitleContains(String keyword, Pageable pageable);
 
     @Query(value = "select l.id, l.img, l.title from liquor l order by pow(l.sweet-:sweet)+pow(l.sour-:sour)+pow(l.body-:body)+pow(l.cool-:cool) limit 3", nativeQuery = true)
     List<LiquorRecommend> findClosest(int sweet, int sour, int body, int cool);
