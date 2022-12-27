@@ -2,30 +2,20 @@
 
 ---
 
-## 1. 메인&검색
+## 1. 전통주
 
-### 메인 페이지 메인 캐러셀에 표시될 전통주 조회
-
-- URI: GET /drinks/main-carousel
+### 메인 캐러셀 전통주 조회 - `GET /drinks/main-carousel`
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data (Array)
     - id: Integer
     - img: String
-    - title: String
 
-### 전통주 여러개 검색
-
-- URI: GET /drinks
+### 전통주 여러개 검색 - `GET /drinks`
 - Request
   - search: String
+  - limit: Integer
   - page: Integer
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data (Array)
     - id: Integer
     - img: String
@@ -41,13 +31,8 @@
     - totalPages: Integer
     - currentPage: Integer
 
-### 전통주 한 개 조회
-
-- URI: GET /drinks/:id
+### 전통주 한 개 조회 - `GET /drinks/:id`
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data
     - id: Integer
     - title: String
@@ -60,21 +45,26 @@
     - sour: Integer
     - body: Integer
     - cool: Integer
-    - material: Array (String)
+    - material: String
     - company: String
+
+### 취향 전통주 조회 - `GET /drinks/recommendation`
+- Request
+  - answer: String
+- Response
+  - data (Array)
+    - id: Integer
+    - img: String
+    - title: String
 
 ## 2. 전통주점
 
-### 지역별 전통주점 검색
-
-- URI: GET /stores
+### 지역별 전통주점 검색 - `GET /stores`
 - Request
   - areaName: String
+  - limit: Integer
   - page: Integer
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data (Array)
     - id: Integer
     - name: String
@@ -90,41 +80,17 @@
 
 ## 3. 전통주 용어사전
 
-### 메인 페이지 서브 캐러셀에 표시될 전통주 용어사전
-
-- URI: GET /guides
+### 전통주 용어사전 조회 - `GET /guides`
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data (Array)
     - id: Integer
     - keyword: String
     - meaning: String
 
-## 4. 전통주 취향 질문
+## 4. 전통주 취향
 
-### 취향 테스트 페이지 접속
-
-- URI: GET /questions
+### 취향 테스트 질문 조회 - `GET /questions`
 - Response
-  - status
-    - code: Integer
-    - message: String
   - data (Array)
     - id: Integer
     - question: String
-
-### 취향 테스트 수행
-
-- URI: GET /drinks/recommendation
-- Request
-  - answer: String
-- Response
-  - status
-    - code: Integer
-    - message: String
-  - data (Array)
-    - id: Integer
-    - img: String
-    - title: String
