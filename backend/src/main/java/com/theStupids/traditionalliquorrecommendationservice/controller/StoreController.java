@@ -21,8 +21,8 @@ public class StoreController {
     final StoreService storeService;
 
     @GetMapping("/stores")
-    public PagingResponse getStores(@RequestParam("areaName") String areaName, @RequestParam("page") int page) {
-        Page<Store> storePage = storeService.getStores(new StoreSearchServiceDTO(Region.valueOf(areaName).getExp(), page-1, 20));
+    public PagingResponse getStores(@RequestParam("areaName") String areaName, @RequestParam("limit") int limit, @RequestParam("page") int page) {
+        Page<Store> storePage = storeService.getStores(new StoreSearchServiceDTO(Region.valueOf(areaName).getExp(), page-1, limit));
 
         return new PagingResponse(storePage.get().map(s -> new StoreDTO(s, new ArrayList<>())).toList(),
                                     new PageData(storePage.getTotalPages(), storePage.getNumber(), storePage.getTotalElements()));
