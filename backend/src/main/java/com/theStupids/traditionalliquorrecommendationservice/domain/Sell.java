@@ -1,8 +1,9 @@
 package com.theStupids.traditionalliquorrecommendationservice.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import lombok.Data;
-
-import javax.persistence.*;
 
 @Data
 @Entity(name = "sell")
