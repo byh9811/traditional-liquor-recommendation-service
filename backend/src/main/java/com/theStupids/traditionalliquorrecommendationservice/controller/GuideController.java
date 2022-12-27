@@ -1,14 +1,10 @@
 package com.theStupids.traditionalliquorrecommendationservice.controller;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Guide;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.BaseResponse;
-import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.Status;
 import com.theStupids.traditionalliquorrecommendationservice.service.GuideService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,16 +13,6 @@ public class GuideController {
 
     @GetMapping("/guides")
     public BaseResponse getGuideList() {
-        BaseResponse response = new BaseResponse();
-        Status status = new Status();
-        try {
-            response.setData(guideService.getGuideList());
-            status.setSuccess();
-            response.setStatus(status);
-        } catch (Exception e) {
-            status.setFail();
-            response.setStatus(status);
-        }
-        return response;
+        return new BaseResponse(guideService.getGuideList());
     }
 }
