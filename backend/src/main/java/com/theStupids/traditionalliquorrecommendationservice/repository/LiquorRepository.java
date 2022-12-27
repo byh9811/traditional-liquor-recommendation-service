@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -20,6 +21,6 @@ public interface LiquorRepository extends JpaRepository<Liquor, Integer> {
 
     Page<LiquorList> findByTitleContains(String keyword, Pageable pageable);
 
-    @Query(value = "select l.id, l.img, l.title from liquor l order by pow(l.sweet-:sweet)+pow(l.sour-:sour)+pow(l.body-:body)+pow(l.cool-:cool) limit 3", nativeQuery = true)
-    List<LiquorRecommend> findClosest(int sweet, int sour, int body, int cool);
+    @Query(value = "select l.id, l.img, l.title from liquor l order by pow(l.sweet-:sweet, 2)+pow(l.sour-:sour, 2)+pow(l.body-:body, 2)+pow(l.cool-:cool, 2) limit 3", nativeQuery = true)
+    List<LiquorRecommend> findClosest(@Param("sweet") int sweet, @Param("sour") int sour, @Param("body") int body, @Param("cool") int cool);
 }
