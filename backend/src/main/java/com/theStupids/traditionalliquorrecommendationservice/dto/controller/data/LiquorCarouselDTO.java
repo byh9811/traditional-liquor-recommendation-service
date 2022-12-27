@@ -7,6 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class LiquorCarouselDTO {
     private int id;
-    private String title;
     private String img;
 }

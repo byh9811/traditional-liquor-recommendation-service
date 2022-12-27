@@ -28,7 +28,7 @@ public class LiquorService {
     }
 
     public List<LiquorCarouselDTO> getCarouselLiquor() {
-        return liquorRepository.findTop3ByOrderByIdAsc().stream().map(i -> new LiquorCarouselDTO(i.getId(), i.getTitle(), i.getImg())).toList();
+        return liquorRepository.findRandom().stream().map(i -> new LiquorCarouselDTO(i.getId(), i.getImg())).toList();
     }
 
     public Page<LiquorListDTO> getLiquorList(LiquorSearchServiceDTO dto) {

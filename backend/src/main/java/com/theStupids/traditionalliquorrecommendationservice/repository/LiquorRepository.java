@@ -17,7 +17,8 @@ import java.util.List;
 public interface LiquorRepository extends JpaRepository<Liquor, Integer> {
     Liquor findById(int id);
 
-    List<LiquorCarousel> findTop3ByOrderByIdAsc();
+    @Query(value = "select l.id, l.img from liquor l order by rand() limit 3", nativeQuery = true)
+    List<LiquorCarousel> findRandom();
 
     Page<LiquorList> findByTitleContains(String keyword, Pageable pageable);
 
