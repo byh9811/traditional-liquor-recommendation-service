@@ -14,16 +14,18 @@ import detail from './ShopDetail.module.css';
 export default function ShopDetail() {
     let [shopData, setShopData] = useState([]); // 처음엔 빈배열 
     // data가져오는 함수!
+    // /stores?areaName = seoul & page = 1
     async function getShopData() {
         try {
-            let shop = await axios.get('/data/shops.json');
-            console.log(shop.data);
-            setShopData(shop.data);
+            let shop = await axios.get('/stores')
+            .then((res) => {
+                console.log(res);
+            })
         }catch(e) {
             console.log(e);
         }
     }
-    console.log(shopData); // 잘 나옴
+    
     useEffect(() => {
         getShopData();
     }, []);

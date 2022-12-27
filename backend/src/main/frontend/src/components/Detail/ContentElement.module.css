@@ -1,7 +1,14 @@
-content {
+.content {
     text-align: center;
 }
+
 .property {
     font-size: 0.9rem;
     color : gray;
+    padding : 1% 3%;
+    /* border : 2px solid black; */
+    /* text-align: center; */
+}
+.value {
+    padding : 1% 3%;
 }

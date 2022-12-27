@@ -54,20 +54,13 @@
     grid-area : carousel;
     overflow-x: scroll;
 }
-.carousel__paging {
+.carousel > .shift {
     position : absolute;
-    bottom : 5%;
-    left : 50%;
-    transform : translateX(-50%);
-    width : 30%;
-    height : 30px;
-    border : 2px solid black;
-    display : flex;
-}
-.carousel__paging > *{
-    flex-grow : 1;
-    border : 1px solid black;
-    font-size : 0.9rem;
+    left : 0;
+    bottom : 0;
+    width : 100px;
+    height : 100px;
+    z-index : 1000;
 }
 .dictionary {
     grid-area: dictionary;

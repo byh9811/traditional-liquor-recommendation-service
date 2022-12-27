@@ -72,3 +72,17 @@
     white-space: nowrap; 
     text-overflow:ellipsis;
 }
+
+@media screen and (max-width : 767px) {
+    .img {
+        display : none;
+    }
+    .item {
+        /* 2 2 2 이렇게 바뀔거임 */
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "title price alcohol"
+        "volume food type";
+    }
+}

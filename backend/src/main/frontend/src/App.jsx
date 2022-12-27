@@ -26,10 +26,10 @@ const router = createBrowserRouter([
         path : '/all/index' , element : <DrinkResult/>
       },
       {
-        path : '/shops' , element : <Shop />
+        path : '/stores/index' , element : <Shop />
       },
       {
-        path : '/shops/:area', element : <ShopDetail />
+        path : '/stores', element : <ShopDetail />
       },
       {
         path : '/drinks/:id', element : <DrinkDetail />

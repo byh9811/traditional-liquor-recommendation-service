@@ -36,7 +36,7 @@ export default function Navbar() {
         <List 
         id = "4"
         icon = { faShop }
-        url = "/shops"
+        url = "/stores/index"
         linkName = "5HOP"
         />
       </ul>
