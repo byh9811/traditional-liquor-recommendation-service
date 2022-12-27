@@ -26,9 +26,9 @@ export default function Carousel() {
     <>
     <div className={carousel.carousel__wrapper}>
         <div className={carousel.carousel__box} ref={ carRef } style = { styles }>
-          <ItemBox url = "img/shop.png"/>
-          <ItemBox url = "img/shop.png"/>
-          <ItemBox url = "img/shop.png"/>
+          <ItemBox url = "img/shop-removebg-preview.png"/>
+          <ItemBox url = "img/shop-removebg-preview.png"/>
+          <ItemBox url = "img/shop-removebg-preview.png"/>
         </div>
     </div>
     <div className={carousel.buttons}>
