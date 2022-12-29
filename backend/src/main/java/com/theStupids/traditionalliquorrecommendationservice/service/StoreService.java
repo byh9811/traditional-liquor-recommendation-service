@@ -12,12 +12,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class StoreService {
     final StoreRepository storeRepository;
-
-    public String getStoreName(int id) {
-        return storeRepository.findById(id).getName();
-    }
+    final FoodRepository foodRepository;
 
     public Page<Store> getStores(StoreSearchServiceDTO dto) {
-        return storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegionExp());
+        Page<StoreList> storePage = storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegionExp());
+        return storePage.map(l -> new StoreDTO(l, foodRepository.findSell(l.getId()).stream().map(Food::getName).toList()));
     }
 }

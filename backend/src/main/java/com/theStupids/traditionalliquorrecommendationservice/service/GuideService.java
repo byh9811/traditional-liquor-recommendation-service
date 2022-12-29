@@ -12,10 +12,6 @@ import java.util.List;
 public class GuideService {
     final GuideRepository guideRepository;
 
-    public Guide getGuide(int id) {
-        return guideRepository.findById(id);
-    }
-
     public List<Guide> getGuideList() {
         return guideRepository.findAll();
     }

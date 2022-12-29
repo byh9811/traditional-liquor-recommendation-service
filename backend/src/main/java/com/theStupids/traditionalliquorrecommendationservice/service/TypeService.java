@@ -12,10 +12,6 @@ import java.util.List;
 public class TypeService {
     final TypeRepository typeRepository;
 
-    public Type getType(int id) {
-        return typeRepository.findById(id);
-    }
-
     public List<Type> getTypeList() {
         return typeRepository.findAll();
     }

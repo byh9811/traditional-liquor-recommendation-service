@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StoreRepository extends JpaRepository<Store, Integer> {
-    Store findById(int id);
 
     @Query(value = "select * from store s where regexp_like(s.address, :exp)", nativeQuery = true)
     Page<Store> findByAddress(Pageable pageable, @Param("exp") String exp);
