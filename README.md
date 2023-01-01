@@ -38,46 +38,18 @@
 
 ## 3. 구현 기능
 
-- `REST API`
-  - index
-    - 메인페이지(GET /index)(
-    - 술 취향test(GET /drinks-test/index)
-    - 전통주점(GET /drinks-shop/index)
-    - 전통주설명(GET /drinks-ex/index)
-    - 로그인페이지(GET /auth/local/index) => 수정필요
-    - 회원가입페이지(GET /auth/new/index) => 수정필요
-    - 술 정렬(GET /drinks ? sort = "food") => 음식으로 정렬
-
-  - auth
-    - 로그인(POST /api/auth/local-process)
-    - 회원가입(POST /api/auth/new-process)
-    
-  - drink
-    - 술 전체조회(GET /drinks)
-    - 술 등록(POST /drinks)
-    - 술 하나조회(GET /drinks/:id)
-    - 술 하나수정(PUT /drinks/:id)
-    - 술 하나삭제(delete /drinks/:id)
-    
-  - users
-    - 유져 전체조회(GET /users)
-    - 유져 생성(POST /users)
-    - 유져 수정(PUT /users/:id)
-    - 유져 삭제(DELETE /users/:id)
-
 - 버전별 기능 및 일정
   - Version 1
-    - 전통주 조회 (GET /drinks/:id)
-    - 메인 페이지 접속 (GET /index)
-    - 전통주 검색 (GET /drinks/:name)
-    - 전통주 전체 검색 (GET /drinks/:name) (필터 가능) (이름, 주종, 가격, 도수, 안주)
-    - 술 페이징 처리
-    - 전통주 상세 정보 페이지 접속 (GET /drinks/:id)
-    - 술 취향 테스트 페이지 접속 (GET /drinks-test/index)
-    - 술 취향 테스트 실행
-    - 군집화 알고리즘 보완
-    - 전국 전통주점 찾기 페이지 접속 (GET /drinks-shop/index) (필터 가능)
+    - 메인 페이지 접속
+    - 전통주 검색 및 전통주 상세 정보
+    - 술 취향 테스트
+    - 전국 전통주점 찾기
   
   - Version 2
     - 로그인
     - 회원가입
+
+## 4. 배운 점
+
+
+## 5. 보완할 점
