@@ -1,4 +1,4 @@
-package com.example.drink.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain;
 
 public interface StoreList {
     int getId();
