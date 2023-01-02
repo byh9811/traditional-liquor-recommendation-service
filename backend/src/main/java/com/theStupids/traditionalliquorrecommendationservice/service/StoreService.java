@@ -18,7 +18,7 @@ public class StoreService {
     final StoreRepository storeRepository;
     final FoodRepository foodRepository;
 
-    public Page<Store> getStores(StoreSearchServiceDTO dto) {
+    public Page<StoreDTO> getStores(StoreSearchServiceDTO dto) {
         Page<StoreList> storePage = storeRepository.findByAddress(PageRequest.of(dto.getCurPage(), dto.getPageSize()), dto.getRegionExp());
         return storePage.map(l -> new StoreDTO(l, foodRepository.findSell(l.getId()).stream().map(Food::getName).toList()));
     }

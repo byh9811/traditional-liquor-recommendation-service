@@ -12,5 +12,5 @@ public interface FoodRepository extends JpaRepository<Food, Integer> {
     List<Food> findAnju(@Param("lid") int lid);
 
     @Query(value = "select f from food f where exists (select 1 from sell s where s.sid=:sid and f.id=s.fid)")
-    List<Menu> findSell(@Param("sid") int sid);
+    List<Food> findSell(@Param("sid") int sid);
 }
