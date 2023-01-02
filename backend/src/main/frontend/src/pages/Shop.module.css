@@ -15,7 +15,7 @@
     border-radius : 10px;
     font-size : 1.3rem;
     font-style : italic;
-    border : 5px solid black;
+    /* border : 5px solid black; */
 }
 .shop > .link {
     display : block;

@@ -13,7 +13,7 @@ export default function SubCarousel() {
     setStyles(
       {
         transition : 'all 0.5s',
-        transform : `translateX(${index * -25}%)`
+        transform : `translateX(${index * -20}%)`
       }
     )
   }
@@ -21,6 +21,9 @@ export default function SubCarousel() {
     <>
     <div className={sub.carousel__wrapper}>
       <div className={sub.carousel__box} ref={ carRef } style = { styles }>
+        <SubItem
+        keyword = "title1"
+        meaning = "content1"/>
         <SubItem
         keyword = "title1"
         meaning = "content1"/>
@@ -54,6 +57,11 @@ export default function SubCarousel() {
       <div className={sub.button}
       ref={el => (btnRef.current[3] = el)}
       onMouseOver = { () => { moveCarousel(3)} }
+      ></div>
+      <div className={sub.button}
+      ref={el => (btnRef.current[4] = el)}
+      onMouseOver = { () => { moveCarousel(4)} }
+      // 이거 컴포넌트화 시킼ㄹ거야! => 싹 다 리펙토링할게 기다려
       ></div>
     </div>
     </>

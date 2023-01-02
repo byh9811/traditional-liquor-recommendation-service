@@ -1,19 +1,20 @@
 .carousel__wrapper {
     width : 100%;
     height : 100%;
-    border : 3px solid black;
+    /* border : 3px solid black; */
     overflow-x: scroll;
 }
 .carousel__box {
-    width : 400%;
+    width : 500%;
     height : 100%;
-    background-color: palegoldenrod;
+    background-color: transparent;
     display : flex;
 }
 .carousel__box > .item {
     flex-grow : 1;
-    border-right : 3px solid black;
+    /* border-right : 3px solid black; */
     font-size : 1.2rem;
+    padding : 1% 1%;
 }
 .item > *{
     display : flex;
@@ -28,7 +29,7 @@
     transform : translateX(-50%);
     width : 100px;
     height : 30px;
-    border : 2px solid black;
+    /* border : 2px solid black; */
     display : flex;
     justify-content: space-around;
     align-items: center;
@@ -36,7 +37,7 @@
 .buttons > *{
     flex-grow : 1;
     margin : 5% 5%;
-    border : 1px solid black;
+    /* border : 1px solid black; */
     border-radius : 20%;
     height : 50%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
