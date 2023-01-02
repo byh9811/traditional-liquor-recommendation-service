@@ -18,7 +18,7 @@ export default function Home() {
           img = "/img/all.jpeg"
         />
         <Func 
-          linkUrl="/shops"
+          linkUrl="/stores/index"
           img = "/img/shop-removebg-preview.png"
         />
         <div className={main.carousel}>

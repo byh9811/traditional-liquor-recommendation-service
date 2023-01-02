@@ -16,6 +16,11 @@ export default function DrinkDetail() { // id값을 넘겨줘야했음!
   console.log('id >>>>>> ');
   console.log(id);
   let [ drinkData, setDrinkData ] = useState({});
+  // 2 setD(2)
+  let name = "배용현"
+  name = "김지성"
+  console.log(name); 
+
   useEffect(() => {
     // id값을 받아와야함...
     axios.get(`/drinks/${id}`)
@@ -24,8 +29,11 @@ export default function DrinkDetail() { // id값을 넘겨줘야했음!
       console.log(res.data.data);
       console.log(res.data.data.title); // undefined
       setDrinkData(res.data.data); // res.data.data.title
+      // 재랜더링이 돼! 
+      // 
     })
-  }, []);
+  }, []); // 처음에만 1번 딱 호출이 된다고 생각 
+  
   console.log(`====== 출력 ======`);
   console.log(drinkData.title);
   
@@ -50,7 +58,6 @@ export default function DrinkDetail() { // id값을 넘겨줘야했음!
             cool = { drinkData.cool }
             food = { drinkData.food }
             material = { drinkData.material }
-          
           />
         </div>
     </div>
