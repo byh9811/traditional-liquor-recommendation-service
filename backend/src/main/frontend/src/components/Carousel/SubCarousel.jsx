@@ -1,13 +1,29 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useRef, useState } from 'react';
 // css 
 import sub from './SubCarousel.module.css';
 import SubItem from './SubItem';
+import axios from "axios";
 
 export default function SubCarousel() {
   let btnRef = useRef([]);
   let carRef = useRef();
   let [styles, setStyles] = useState({});
+  let [guides, setGuides] = useState([]);
+  async function getGuides() {
+    try {
+      await axios.get(`/guides`)
+          .then((res) => {
+            console.log(res.data.data);
+            setGuides(res.data.data);
+          })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+    getGuides();
+  }, [])
   function moveCarousel(index) {
     // alert(`${index}버튼 눌림!`);
     setStyles(
@@ -21,21 +37,14 @@ export default function SubCarousel() {
     <>
     <div className={sub.carousel__wrapper}>
       <div className={sub.carousel__box} ref={ carRef } style = { styles }>
-        <SubItem
-        keyword = "title1"
-        meaning = "content1"/>
-        <SubItem
-        keyword = "title1"
-        meaning = "content1"/>
-        <SubItem
-        keyword = "title1"
-        meaning = "content1"/>
-        <SubItem
-        keyword = "title1"
-        meaning = "content1"/>
-        <SubItem
-        keyword = "title1"
-        meaning = "content1"/>
+        {
+          guides.map((value) =>
+              <SubItem
+                keyword = {value.keyword}
+                meaning = {value.meaning}
+              />
+          )
+        }
       </div>
     </div>
     {/* 이거도 컴포넌트로 남길거야!! 버튼 전체를 하나의 컴포넌트로 남겨야함

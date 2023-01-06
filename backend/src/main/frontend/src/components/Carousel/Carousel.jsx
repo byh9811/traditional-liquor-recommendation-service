@@ -12,6 +12,22 @@ export default function Carousel() {
   let btnRef = useRef([]); // 여러개를 배열로다가 관리... querySelectorAll같은 역할!
   let carRef = useRef();
   let [styles, setStyles] = useState({});
+  let [data, setData] = useState([]);
+  async function getData() {
+    try {
+      await axios.get(`/drinks/main-carousel`)
+          .then((res) => {
+            setData(res.data.data);
+          })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
+
   function moveCarousel(index) {
     // alert(`${index}버튼 눌림!`);
     setStyles(
@@ -26,9 +42,11 @@ export default function Carousel() {
     <>
     <div className={carousel.carousel__wrapper}>
         <div className={carousel.carousel__box} ref={ carRef } style = { styles }>
-          <ItemBox url = "img/shop-removebg-preview.png"/>
-          <ItemBox url = "img/shop-removebg-preview.png"/>
-          <ItemBox url = "img/shop-removebg-preview.png"/>
+          {
+            data.map((value) =>
+                <ItemBox id = {value.id} url = {value.img} />
+            )
+          }
         </div>
     </div>
     <div className={carousel.buttons}>
