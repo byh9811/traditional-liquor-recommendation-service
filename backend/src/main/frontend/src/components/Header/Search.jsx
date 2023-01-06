@@ -14,7 +14,7 @@ export default function Search() {
         e.preventDefault(); // 새로고침 방지! 
         setText(''); // 빈 문자열로 새로고침
         console.log(text);
-        navigate(`/drinks?search=${text}&page=1`); // 페이지 이동!
+        navigate(`/drinks?search=${text}&page=1&limit=20`); // 페이지 이동!
     }
     // 보내주는거까지...!!
   return (

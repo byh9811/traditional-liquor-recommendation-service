@@ -13,11 +13,13 @@ export default function DrinkResult() {
 
   async function getData() {
     try {
-      const response = await axios.get(`/drinks?search=${data}&page=1`)
+      const response = await axios.get(`/drinks?search=${data}&page=1&limit=20`)
       .then((res) => {
+        console.log(res.data);
         console.log(res.data.data);
-        console.log(typeof res.data.data);
-        setData(res.data.data);
+        console.log(res.data.data[0]);
+        console.log('호출됨');
+        setData(res.data.data); // 바꿔줌!!
       })
       // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
     }catch(err) {
@@ -26,7 +28,7 @@ export default function DrinkResult() {
   }
   console.log(data);
   useEffect(() => {
-    getData();
+    getData(); // 이제 data[0].title 이런식으로 접근하면 돼!
   }, []); // 1번만 호출!
   return (
     <div className={result.result__wrapper}>
