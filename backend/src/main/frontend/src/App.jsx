@@ -9,7 +9,7 @@ import Shop from './pages/Shop';
 import DrinkResult from './pages/DrinkResult'; 
 import DrinkDetail from './pages/DrinkDetail';
 import ShopDetail from './components/Shops/ShopDetail';
-
+// 재클롡
 const router = createBrowserRouter([
 
   {
