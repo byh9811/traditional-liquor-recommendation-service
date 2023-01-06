@@ -13,7 +13,7 @@ export default function DrinkResult() {
 
   async function getData() {
     try {
-      const response = await axios.get(`/drinks?search=${data}&page=1`)
+      const response = await axios.get(`/drinks?search=${data}&page=1&limit=20`)
       .then((res) => {
         console.log(res.data.data);
         console.log(typeof res.data.data);
