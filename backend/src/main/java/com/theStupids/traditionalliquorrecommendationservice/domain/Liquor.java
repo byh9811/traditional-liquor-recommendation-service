@@ -12,8 +12,6 @@ public class Liquor {
     @Column(nullable = false)
     private String title;
 
-    private String img;
-
     @Column(nullable = false)
     private int price;
 

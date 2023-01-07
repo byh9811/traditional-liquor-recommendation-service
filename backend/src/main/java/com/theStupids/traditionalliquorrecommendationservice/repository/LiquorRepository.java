@@ -17,11 +17,11 @@ import java.util.List;
 public interface LiquorRepository extends JpaRepository<Liquor, Integer> {
     Liquor findById(int id);
 
-    @Query(value = "select l.id, l.img from liquor l order by rand() limit 3", nativeQuery = true)
+    @Query(value = "select l.id from liquor l order by rand() limit 3", nativeQuery = true)
     List<LiquorCarousel> findRandom();
 
     Page<LiquorList> findByTitleContains(String keyword, Pageable pageable);
 
-    @Query(value = "select l.id, l.img, l.title from liquor l order by pow(l.sweet-:sweet, 2)+pow(l.sour-:sour, 2)+pow(l.body-:body, 2)+pow(l.cool-:cool, 2) limit 3", nativeQuery = true)
+    @Query(value = "select l.id, l.title from liquor l order by pow(l.sweet-:sweet, 2)+pow(l.sour-:sour, 2)+pow(l.body-:body, 2)+pow(l.cool-:cool, 2) limit 3", nativeQuery = true)
     List<LiquorRecommend> findClosest(@Param("sweet") int sweet, @Param("sour") int sour, @Param("body") int body, @Param("cool") int cool);
 }

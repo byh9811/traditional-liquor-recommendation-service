@@ -8,6 +8,7 @@ import ItemProperty from './ItemProperty';
 
 export default function Item({ id, title, price, volume, type, alcohol, food }) {
     const navigate = useNavigate();
+    const src = "/display/" + id + "?w=640&h=640";
     function goDetail(id, title) {
       console.log(typeof id);
       navigate(`/drinks/${id}`); // ❗️ detail page로 이동 => 갈 때 id넘겨줘야돼!! ❗️
@@ -18,7 +19,9 @@ export default function Item({ id, title, price, volume, type, alcohol, food }) 
       goDetail(id, title);
     } }
     >
-        <div className={item.img}>1</div>
+        <div className={item.img}>
+            <img src={src}/>
+        </div>
         <ItemProperty 
         className = "item.title"
         property= "title"

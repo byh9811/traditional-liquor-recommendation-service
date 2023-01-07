@@ -8,7 +8,6 @@
 - Response
   - data (Array)
     - id: Integer
-    - img: String
 
 ### 전통주 여러개 검색 - `GET /drinks`
 - Request
@@ -18,7 +17,6 @@
 - Response
   - data (Array)
     - id: Integer
-    - img: String
     - title: String
     - price: Integer
     - volume: Integer
@@ -54,7 +52,6 @@
 - Response
   - data (Array)
     - id: Integer
-    - img: String
     - title: String
 
 ## 2. 전통주점

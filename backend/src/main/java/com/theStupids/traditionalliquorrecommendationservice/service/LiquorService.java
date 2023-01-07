@@ -1,8 +1,8 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.Food;
+import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorCarousel;
 import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
-import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorCarouselDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorDetailDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorListDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorRecommendDTO;
@@ -27,8 +27,8 @@ public class LiquorService {
         return new LiquorDetailDTO(liquorRepository.findById(id), foodRepository.findAnju(id).stream().map(Food::getName).toList());
     }
 
-    public List<LiquorCarouselDTO> getCarouselLiquor() {
-        return liquorRepository.findRandom().stream().map(i -> new LiquorCarouselDTO(i.getId(), i.getImg())).toList();
+    public List<Integer> getCarouselLiquor() {
+        return liquorRepository.findRandom().stream().map(LiquorCarousel::getId).toList();
     }
 
     public Page<LiquorListDTO> getLiquorList(LiquorSearchServiceDTO dto) {

@@ -21,7 +21,6 @@ public class LiquorListDTO {
     public LiquorListDTO(LiquorList liquorList, List<String> food) {
         this.id = liquorList.getId();
         this.title = liquorList.getTitle();
-        this.img = liquorList.getImg();
         this.price = liquorList.getPrice();
         this.volume = liquorList.getVolume();
         this.type = liquorList.getType();
