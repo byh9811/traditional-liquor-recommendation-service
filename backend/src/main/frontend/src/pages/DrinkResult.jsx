@@ -19,7 +19,7 @@ export default function DrinkResult() {
         console.log(res.data.data);
         console.log(res.data.data[0]);
         console.log('호출됨');
-        setData(res.data.data); // 바꿔줌!!
+        setData(res.data.data); // qkR
       })
       // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
     }catch(err) {
@@ -39,8 +39,7 @@ export default function DrinkResult() {
           {
             data.map((value) => 
               <Item  
-              // 만약 Item을 click하는거면 
-              // Item component에다가 작성해주기!
+              // 만약 Item을 click하는거면 Item component에다가 작성해주기!
                 id = {value.id}
                 title = {value.title}
                 price = {value.price}
