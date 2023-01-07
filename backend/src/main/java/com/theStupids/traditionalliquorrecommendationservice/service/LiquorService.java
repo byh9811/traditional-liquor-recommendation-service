@@ -37,6 +37,6 @@ public class LiquorService {
     }
 
     public List<LiquorRecommendDTO> getRecommendLiquor(int[] answer) {
-        return liquorRepository.findClosest(answer[0], answer[1], answer[2], answer[3]).stream().map(l -> new LiquorRecommendDTO(l.getId(), l.getTitle(), l.getImg())).toList();
+        return liquorRepository.findClosest(answer[0], answer[1], answer[2], answer[3]).stream().map(l -> new LiquorRecommendDTO(l.getId(), l.getTitle())).toList();
     }
 }
