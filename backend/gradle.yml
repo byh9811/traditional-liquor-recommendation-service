@@ -1,0 +1,5 @@
+org:
+  gradle:
+    caching: false
+    parallel: false
+    jvmargs: -Xmx10240m
