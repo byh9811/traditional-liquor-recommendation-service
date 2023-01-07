@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function ItemBox({ id }) {
     const navigate = useNavigate();
-    const src = "/display/" + id + "?w=640&h=640";
+    const src = "/display/" + id;
     function goDetail(id) {
         navigate(`/drinks/${id}`);
     }

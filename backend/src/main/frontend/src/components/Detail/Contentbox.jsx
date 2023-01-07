@@ -63,8 +63,8 @@ export default function Contentbox({ title, company, type, price, volume, alcoho
         value = { food }
         /> 
         <ContentElement 
-        className = {content.content__matetial}
-        property = "matetial"
+        className = {content.content__material}
+        property = "material"
         value = { material }
         /> 
     </div>

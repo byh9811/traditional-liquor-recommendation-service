@@ -8,7 +8,7 @@ import ItemProperty from './ItemProperty';
 
 export default function Item({ id, title, price, volume, type, alcohol, food }) {
     const navigate = useNavigate();
-    const src = "/display/" + id + "?w=640&h=640";
+    const src = "/display/" + id;
     function goDetail(id, title) {
       console.log(typeof id);
       navigate(`/drinks/${id}`); // ❗️ detail page로 이동 => 갈 때 id넘겨줘야돼!! ❗️
