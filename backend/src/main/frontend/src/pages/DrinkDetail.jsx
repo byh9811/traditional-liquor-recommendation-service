@@ -41,7 +41,7 @@ export default function DrinkDetail() { // id값을 넘겨줘야했음!
     <div className={detail.detail__wrapper}>
         <div className={detail.detail__img}>
           <Imgbox 
-            imgUrl= "/img/all-removebg-preview.png"
+            id = { id }
           />
         </div>
         <div className={detail.detail__content}>

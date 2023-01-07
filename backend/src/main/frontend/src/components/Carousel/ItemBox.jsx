@@ -2,14 +2,15 @@ import React from 'react'
 import carousel from './Carousel.module.css';
 import {useNavigate} from "react-router-dom";
 
-export default function ItemBox({ id, url }) {
+export default function ItemBox({ id }) {
     const navigate = useNavigate();
+    const src = "/display/" + id + "?w=640&h=640";
     function goDetail(id) {
         navigate(`/drinks/${id}`);
     }
   return (
     <div className={carousel.item} >
-        <img src= { url } alt=""
+        <img src= { src } alt=""
              onClick={ () => {
                  goDetail(id);
              }}

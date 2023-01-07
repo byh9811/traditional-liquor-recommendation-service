@@ -44,7 +44,7 @@ export default function Carousel() {
         <div className={carousel.carousel__box} ref={ carRef } style = { styles }>
           {
             data.map((value) =>
-                <ItemBox id = {value.id} url = {value.img} />
+                <ItemBox id = {value.id} />
             )
           }
         </div>
