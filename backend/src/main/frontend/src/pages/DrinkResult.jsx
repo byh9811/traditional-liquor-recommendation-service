@@ -39,7 +39,8 @@ export default function DrinkResult() {
           {
             data.map((value) => 
               <Item  
-              // 만약 Item을 click하는거면 Item component에다가 작성해주기!
+              // 만약 Item을 click하는거면 
+              // Item component에다가 작성해주기!
                 id = {value.id}
                 title = {value.title}
                 price = {value.price}
