@@ -33,10 +33,15 @@ export default function ShopDetail() {
             // setData(res.data.data); // 바꿔줌!!
             // data가 안 받아지는데...
             console.log('axios >> ', res); // 여기까지 됨.
-            
+            console.log(res);
+            console.log(res.data);
+            console.log(res.data.data);
+            setData(res.data.data);
+            console.log(res.data.data[0]);
         })
     }, [])
-    
+    console.log('state변수 >> ');
+    console.log(data);
   return (
     <div className={ detail.detail__wrapper }>
         {/* ?뒤는 신경 안 써줘 돼! 일단.. react router /stores로 해도 돼! */}

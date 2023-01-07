@@ -12,14 +12,23 @@
 }
 /* ❗️detail중 왼쪽 이미지 전체박스❗️ */
 .detail__img {
-    flex-grow : 1.2;
+    /* flex-grow : 1.2; */
+    min-width : 40%;
+    max-width : 40%;
 }
 .detail__content {
-    flex-grow : 1.5;
+    /* flex-grow : 1.5; */
+    min-width : 60%;
+    max-width : 60%;
 }
 
 @media screen and (max-width : 767px) {
     .detail__img {
         display : none;
+    }
+    .detail__content {
+        /* flex-grow : 1.5; */
+        min-width : 100%;
+        max-width : 100%;
     }
 }
