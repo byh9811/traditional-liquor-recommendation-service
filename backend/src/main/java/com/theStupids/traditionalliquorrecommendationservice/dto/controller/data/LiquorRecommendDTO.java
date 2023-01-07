@@ -8,5 +8,4 @@ import lombok.Data;
 public class LiquorRecommendDTO {
     private int id;
     private String title;
-    private String img;
 }

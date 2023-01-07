@@ -9,7 +9,6 @@ import java.util.List;
 public class LiquorDetailDTO {
     private int id;
     private String title;
-    private String img;
     private int price;
     private int volume;
     private String type;
