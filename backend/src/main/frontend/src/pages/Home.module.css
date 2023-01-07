@@ -18,6 +18,9 @@
     border-radius : 10px;
     overflow: hidden;
 }
+.content {
+    position : relative;
+}
 .content:hover {
     transition : all 0.5s ease;
     transform : scale(1.05);
@@ -25,15 +28,12 @@
 /* content자식요소 3개중 첫 번째 */
 .content:nth-child(1) {
     grid-area: test;
-    position : relative;
 }
 .content:nth-child(2) {
     grid-area: _all;
-    position : relative;
 }
 .content:nth-child(3) {
     grid-area: shop;
-    position : relative;
 }
 .content > .link {
     display : block;

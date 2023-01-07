@@ -1,8 +1,7 @@
 import axios from 'axios';
 import React from 'react'
-import { useState } from 'react';
-
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom'; // query string을 가져오기 위함! 
 import Item from '../components/Result/Item';
 // css
 import result from './DrinkResult.module.css';
@@ -10,15 +9,22 @@ import result from './DrinkResult.module.css';
 export default function DrinkResult() {
   // title, type, food, flavorType을 이제 서버에서 받아와야해!! 
   let [data, setData] = useState([]);
-
+  let [searchParams, setSearchParams] = useSearchParams();
+  let [inputData, setInputData] = useState();
+  console.log('shop result 랜더링 됨!!');
+  console.log('쿼리스트링 출력 >> ');
+  const location = useLocation();
+  console.log(location.search);
+  const searchName = searchParams.get('search');
+  console.log(searchName); //searchName이 포함된거!! =======> 여기까지는 돼!!!!!!!!!!
   async function getData() {
     try {
-      const response = await axios.get(`/drinks?search=${data}&page=1&limit=20`)
+      const response = await axios.get(`/drinks?search=${searchName}&page=1&limit=20`)
       .then((res) => {
+        console.log('전체 호출 >> ');
         console.log(res.data);
         console.log(res.data.data);
-        console.log(res.data.data[0]);
-        console.log('호출됨');
+        setInputData(searchName);
         setData(res.data.data); // qkR
       })
       // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
@@ -26,10 +32,12 @@ export default function DrinkResult() {
       console.log(err);
     }
   }
+  console.log(`입력된 data >>`, searchName);
   console.log(data);
   useEffect(() => {
+    console.log('useEffect 호출됨!!!');
     getData(); // 이제 data[0].title 이런식으로 접근하면 돼!
-  }, []); // 1번만 호출!
+  }, searchName); // 1번만 호출!
   return (
     <div className={result.result__wrapper}>
         <div className={result.title}>
