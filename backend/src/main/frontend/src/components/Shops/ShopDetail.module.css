@@ -28,6 +28,15 @@
     box-shadow : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     border-radius : 10px;
     overflow-y: scroll;
+    display : block;
+    text-decoration: none;
+    color : black;
+    font-weight: 600;
+}
+
+.shop__wrapper > .shop__card:hover {
+    transition : all 0.5 ease;
+    background-color: rgb(183, 215, 243);
 }
 .shop__content {
     text-align: center;
