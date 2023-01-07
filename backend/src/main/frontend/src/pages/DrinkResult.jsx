@@ -8,30 +8,33 @@ import result from './DrinkResult.module.css';
 
 export default function DrinkResult() {
   // title, type, food, flavorType을 이제 서버에서 받아와야해!! 
+
+  // http://localhost:8080/drinks?search=%EB%B0%A4&page=1&limit=20 =>  query문
+  // 감 => 감 앙 => 앙 
   let [data, setData] = useState([]);
   let [searchParams, setSearchParams] = useSearchParams();
   let [inputData, setInputData] = useState();
   console.log('shop result 랜더링 됨!!');
   console.log('쿼리스트링 출력 >> ');
   const location = useLocation();
-  console.log(location.search);
+  console.log(location.search); // query문! ?search=%EB%B0%A4&page=1&limit=20
   const searchName = searchParams.get('search');
-  console.log(searchName); //searchName이 포함된거!! =======> 여기까지는 돼!!!!!!!!!!
-  async function getData() {
-    try {
-      const response = await axios.get(`/drinks?search=${searchName}&page=1&limit=20`)
-      .then((res) => {
-        console.log('전체 호출 >> ');
-        console.log(res.data);
-        console.log(res.data.data);
-        setInputData(searchName);
-        setData(res.data.data); // qkR
-      })
-      // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
-    }catch(err) {
-      console.log(err);
-    }
-  }
+  console.log(searchName); //searchName이 포함된거!! =======> 여기까지는 돼!!!!!!!!!! %EB%B0%A4
+                      async function getData() {
+                        try {
+                          const response = await axios.get(`/drinks?search=${searchName}&page=1&limit=20`)
+                          .then((res) => {
+                            console.log('전체 호출 >> ');
+                            console.log(res.data);
+                            console.log(res.data.data); // 내가 실제 원하는 data ==> 진짜 data를 얻어옴.
+                            setInputData(searchName);
+                            setData(res.data.data); // qkR
+                          })
+                          // setData(userId); // data빈배열을 저 data로 바꿔줌. ㅁ
+                        }catch(err) {
+                          console.log(err);
+                        }
+                      }
   console.log(`입력된 data >>`, searchName);
   console.log(data);
   useEffect(() => {
