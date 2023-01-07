@@ -18,7 +18,7 @@ export default function DrinkResult() {
   console.log('쿼리스트링 출력 >> ');
   const location = useLocation();
   console.log(location.search); // query문! ?search=%EB%B0%A4&page=1&limit=20
-  const searchName = searchParams.get('search');
+  let searchName = searchParams.get('search');
   console.log(searchName); //searchName이 포함된거!! =======> 여기까지는 돼!!!!!!!!!! %EB%B0%A4
                       async function getData() {
                         try {
@@ -40,7 +40,7 @@ export default function DrinkResult() {
   useEffect(() => {
     console.log('useEffect 호출됨!!!');
     getData(); // 이제 data[0].title 이런식으로 접근하면 돼!
-  }, searchName); // 1번만 호출!
+  }, [data]); // 1번만 호출!
   return (
     <div className={result.result__wrapper}>
         <div className={result.title}>
