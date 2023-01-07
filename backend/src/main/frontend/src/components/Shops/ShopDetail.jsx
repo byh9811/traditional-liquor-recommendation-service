@@ -41,7 +41,7 @@ export default function ShopDetail() {
         })
     }, [])
     console.log('state변수 >> ');
-    console.log(data);
+    console.log(data)
   return (
     <div className={ detail.detail__wrapper }>
         {/* ?뒤는 신경 안 써줘 돼! 일단.. react router /stores로 해도 돼! */}
