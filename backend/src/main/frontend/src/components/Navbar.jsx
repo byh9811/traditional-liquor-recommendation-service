@@ -30,7 +30,7 @@ export default function Navbar() {
         <List 
         id = "3"
         icon = { faWineBottle }
-        url = "/all/index"
+        url = "/drinks?search=&page=1&limit=20"
         linkName = "DRINK5"
         />
         <List 
