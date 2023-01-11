@@ -14,7 +14,7 @@ export default function Home() {
           img = "/img/test-removebg-preview.png"
         />
         <Func 
-          linkUrl="/all/index"
+          linkUrl="/drinks?search=&page=1&limit=20"
           img = "/img/all.jpeg"
         />
         <Func 

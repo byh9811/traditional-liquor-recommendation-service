@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       
       },
       {
-        path : '/all/index' , element : <DrinkResult/>
+        path : "/drinks?search=&page=1&limit=20" , element : <DrinkResult/>
       },
       {
         path : '/stores/index' , element : <Shop />
