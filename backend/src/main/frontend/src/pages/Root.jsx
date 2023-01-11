@@ -21,9 +21,9 @@ export default function Root() {
       <main>
           <Outlet />
           {/* 얘의  */}
-        {/* Outlet즉, 여기에 이제 다른 컨텐츠가 온다는 의미. 
-        main에서 계속 다른 컨텐츠가 오기때문에, 다른데는 똑같아. 
-        */}
+          {/* Outlet즉, 여기에 이제 다른 컨텐츠가 온다는 의미. 
+          main에서 계속 다른 컨텐츠가 오기때문에, 다른데는 똑같아. 
+          */}
       </main>
       
     </div>

@@ -40,6 +40,8 @@ const router = createBrowserRouter([
       {
         path : `/drinks`, element : <DrinkResult/>
       }
+      // 필요한 재료만 서버에서 만들어 => 손님한테 던져버려. 
+      // 손님이 알아서 재료보고 지 만들고싶은거 만들어. 
     ]
   },
   // 저 children들은 무조건적으로 navbar header가 맨날 똑같이 고정이 됨. 

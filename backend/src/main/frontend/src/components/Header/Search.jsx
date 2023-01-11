@@ -15,6 +15,7 @@ export default function Search() {
         setText(''); // 빈 문자열로 새로고침
         console.log(text); // 입력한 값
         navigate(`/drinks?search=${text}&page=1&limit=20`); // 페이지 이동!
+        // result로 가는거야!!!!!! 
     }
     // 보내주는거까지...!!
   return (
