@@ -7,7 +7,7 @@ import paper from './TestPaper.module.css';
 
 export default function TestPaper({ name }) {
   let [text, setText] = useState([]);
-  let id = ["id1", "id2", "id3", "id4"];
+  let id = ["간절히 원한다😘", "좋아한다😀", "그저그렇다😕", "싫다🤮"];
   // let buttonContent = ["넘겨", "넘겨", "넘겨", "제출"]
   const navigate = useNavigate();
 
