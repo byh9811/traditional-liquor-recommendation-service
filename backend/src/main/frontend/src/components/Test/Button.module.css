@@ -1,0 +1,19 @@
+:root {
+    --button-shadow : rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    --hover-button-shadow : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    --color--bg : #ddd;
+}
+.form__button {
+    width : 40%;
+    height : 50%;
+    border : none;
+    outline : none;
+    box-shadow: var(--button-shadow);
+    border-radius : 10%;
+    cursor : pointer;
+}
+.form__button:hover {
+    /* ❗️hover나 이런거 붙일 때는.. 띄어쓰면 안 먹혀!!❗️ */
+    transition : all 0.5s;
+    box-shadow: var(--hover-button-shadow);
+}

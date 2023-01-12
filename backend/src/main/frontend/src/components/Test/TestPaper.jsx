@@ -7,7 +7,7 @@ import paper from './TestPaper.module.css';
 
 export default function TestPaper({ name }) {
   let [text, setText] = useState([]);
-  let id = ["간절히 원한다😘", "좋아한다😀", "그저그렇다😕", "싫다🤮"];
+  let id = ["최고야😘", "괜찮아😀", "그저그래😕", "싫어🤮"];
   // let buttonContent = ["넘겨", "넘겨", "넘겨", "제출"]
   const navigate = useNavigate();
 
@@ -25,44 +25,46 @@ export default function TestPaper({ name }) {
     }
   return (
     <main>
-      <form onSubmit={ handleSubmit }>
-        <RadioBox 
-        name = { name }
-        id = { id[0] }
-        onChange = { (e) => {
-          setText(e.target.value);
-        }}
-        value = { text[0] }
-        />
-        <RadioBox 
-        name = { name }
-        id = { id[1] }
-        onChange = { (e) => {
-          setText(e.target.value);
-        }}
-        value = { text[1] }
-        />
-        <RadioBox 
-        name = { name }
-        id = { id[2] }
-        onChange = { (e) => {
-          setText(e.target.value);
-        }}
-        value = { text[2] }
+      <form onSubmit={ handleSubmit } class={paper.form}>
+          <RadioBox 
+          name = { name }
+          id = { id[0] }
+          onChange = { (e) => {
+            setText(e.target.value);
+          }}
+          value = { text[0] }
+          />
+          <RadioBox 
+          name = { name }
+          id = { id[1] }
+          onChange = { (e) => {
+            setText(e.target.value);
+          }}
+          value = { text[1] }
+          />
+          <RadioBox 
+          name = { name }
+          id = { id[2] }
+          onChange = { (e) => {
+            setText(e.target.value);
+          }}
+          value = { text[2] }
 
-        />
-        <RadioBox 
-        name = { name }
-        id = { id[3] }
-        onChange = { (e) => {
-          setText(e.target.value);
-        }}
-        value = { text[3] }
+          />
+          <RadioBox 
+          name = { name }
+          id = { id[3] }
+          onChange = { (e) => {
+            setText(e.target.value);
+          }}
+          value = { text[3] }
 
-        />
-        <Button 
-        content = { "안녕" }
-        />
+          />
+          <div className={ paper.form__wrapper }>
+            <Button 
+            content = { "안녕" }
+            />
+          </div>
       </form>
       {/* 제출버튼과 carousel button구별해주자! */}
     </main>
