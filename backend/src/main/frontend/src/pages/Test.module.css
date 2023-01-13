@@ -24,19 +24,10 @@
     height : 100%;
     background-color: transparent;
     display : flex;
+    border : 3px solid black;
 }
-.carousel > .test {
-    flex-grow : 1;
-    height : 100%;
-    /* border : 2px solid black; */
-    display : flex;
-    flex-direction: column; 
-}
-.test > header {
-    flex-grow : 0.5;
-}
-.test > main {
-    flex-grow : 2;
+.carousel > .form {
+    background-color: palegreen;
 }
 
 /* 결과 부분!  */
