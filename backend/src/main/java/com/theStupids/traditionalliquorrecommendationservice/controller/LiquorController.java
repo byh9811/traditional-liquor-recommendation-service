@@ -7,11 +7,13 @@ import com.theStupids.traditionalliquorrecommendationservice.dto.controller.resp
 import com.theStupids.traditionalliquorrecommendationservice.dto.service.LiquorSearchServiceDTO;
 import com.theStupids.traditionalliquorrecommendationservice.service.LiquorService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/drinks")
