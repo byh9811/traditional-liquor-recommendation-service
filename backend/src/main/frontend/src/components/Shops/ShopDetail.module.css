@@ -7,14 +7,13 @@
     height : 100%;
     /* border : 5px solid black; */
     display : flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .shop__wrapper {
     overflow-y: scroll;
     height : 90%;
-    width : 90%;
+    width : 100%;
     box-shadow : rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     border-radius : 10px;
     display : grid;
@@ -22,6 +21,14 @@
     grid-auto-rows: minmax(35%, 35%);
     grid-gap : 1vh 1vw;
     padding : 5% 5%;
+    margin : 0 auto;
+}
+.shop__paging {
+    height : 10%;
+    width : 100%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
 }
 /* shop주점 wrapper(여기 안에 content들어감.) */
 .shop__wrapper > .shop__card {

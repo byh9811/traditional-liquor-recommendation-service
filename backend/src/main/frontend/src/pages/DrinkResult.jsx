@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom'; // query string을 가져오기 위함! 
+import Bar from '../components/Pagination/Bar';
 import Item from '../components/Result/Item';
 // css
 import result from './DrinkResult.module.css';
@@ -50,6 +51,9 @@ export default function DrinkResult() {
             
          }
        </div> 
+       <div className={result.paging__bar}>
+        <Bar />
+       </div>
     </div>
   )
 }
