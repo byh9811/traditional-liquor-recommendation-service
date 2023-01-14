@@ -8,35 +8,33 @@ import com.theStupids.traditionalliquorrecommendationservice.dto.service.LiquorS
 import com.theStupids.traditionalliquorrecommendationservice.service.LiquorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/drinks")
 public class LiquorController {
     final LiquorService liquorService;
 
-    @GetMapping("/drinks/{id}")
+    @GetMapping("/{id}")
     public BaseResponse getLiquor(@PathVariable("id") int id) {
         return new BaseResponse(liquorService.getLiquor(id));
     }
 
-    @GetMapping("/drinks/main-carousel")
+    @GetMapping("/main-carousel")
     public BaseResponse getCarouselLiquor() {
         return new BaseResponse(liquorService.getCarouselLiquor());
     }
 
-    @GetMapping("/drinks")
+    @GetMapping()
     public PagingResponse getLiquorList(@RequestParam("search") String keyword, @RequestParam("limit") int limit, @RequestParam("page") int page) {
         Page<LiquorListDTO> liquorPage = liquorService.getLiquorList(new LiquorSearchServiceDTO(keyword, page-1, limit));
         return new PagingResponse(liquorPage.get(), new PageData(liquorPage));
     }
 
-    @GetMapping("/drinks/recommendation")
+    @GetMapping("/recommendation")
     public BaseResponse getRecommendationLiquor(@RequestParam("answer") String answer) {
         return new BaseResponse(liquorService.getRecommendLiquor(Arrays.stream(answer.split(",")).mapToInt(Integer::parseInt).toArray()));
     }
