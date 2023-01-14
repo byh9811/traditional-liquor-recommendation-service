@@ -28,8 +28,25 @@
 }
 .carousel > .form {
     background-color: palegreen;
+    display : flex;
+}
+.form > .question__page {
+    flex-grow : 1;
+    height : 100%;
+    border : 2px solid black;
+    /* display : flex; */
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
+.question__page > .question {
+    height : 20%;
+}
+.question__page > .answer {
+    height : 80%;
+    border : 2px solid black;
+    overflow-y: scroll;
+}
 /* 결과 부분!  */
 .result__area {
     width : 35%;

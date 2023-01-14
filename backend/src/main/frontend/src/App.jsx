@@ -9,6 +9,7 @@ import Shop from './pages/Shop';
 import DrinkResult from './pages/DrinkResult'; 
 import DrinkDetail from './pages/DrinkDetail';
 import ShopDetail from './components/Shops/ShopDetail';
+import NewPage from './pages/NewPage';
 // 재클롡
 const router = createBrowserRouter([
 
@@ -38,7 +39,10 @@ const router = createBrowserRouter([
         path : '/drinks/:id', element : <DrinkDetail />
       },
       {
-        path : `/drinks`, element : <DrinkResult/>
+        path : `/drinks`, element : <DrinkResult/>,
+      },
+      {
+        path : `/drinks/recommendation`, element : <NewPage />
       }
       // 필요한 재료만 서버에서 만들어 => 손님한테 던져버려. 
       // 손님이 알아서 재료보고 지 만들고싶은거 만들어. 

@@ -29,6 +29,7 @@ export default function Search() {
         onChange = {
             handleChange
         }
+
         />
     </form>
   )
