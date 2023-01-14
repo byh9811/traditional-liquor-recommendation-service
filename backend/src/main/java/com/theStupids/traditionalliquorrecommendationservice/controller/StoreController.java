@@ -24,6 +24,6 @@ public class StoreController {
     public PagingResponse getStores(@RequestParam("areaName") String areaName, @RequestParam("limit") int limit, @RequestParam("page") int page) {
         Page<StoreDTO> storePage = storeService.getStores(new StoreSearchServiceDTO(Region.valueOf(areaName).getExp(), page-1, limit));
 
-        return new PagingResponse(storePage.get(), new PageData(storePage.getTotalPages(), storePage.getNumber(), storePage.getTotalElements()));
+        return new PagingResponse(storePage.get(), new PageData(storePage));
     }
 }

@@ -33,7 +33,7 @@ public class LiquorController {
     @GetMapping("/drinks")
     public PagingResponse getLiquorList(@RequestParam("search") String keyword, @RequestParam("limit") int limit, @RequestParam("page") int page) {
         Page<LiquorListDTO> liquorPage = liquorService.getLiquorList(new LiquorSearchServiceDTO(keyword, page-1, limit));
-        return new PagingResponse(liquorPage.get(), new PageData(liquorPage.getTotalPages(), liquorPage.getNumber(), liquorPage.getTotalElements()));
+        return new PagingResponse(liquorPage.get(), new PageData(liquorPage));
     }
 
     @GetMapping("/drinks/recommendation")
