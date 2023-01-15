@@ -28,18 +28,20 @@ export default function NewPage() {
     },[ property ])
     console.log(arr);
   return (
-    <div className={testResult.container}>
-        {
-            arr.map((value) => 
-                <div className={testResult.box}onClick = { () => {
-                    navigate(`/drinks/${value.id}`);
-                }}>
-                    <div className={ testResult.img__box }>
-                        <img src= {`/display/${value.id}`} className={testResult.id} />
-                    <p className={testResult.title}> {value.title} </p>
-                </div>
-            )
-        }
-    </div>
+      <div className={testResult.container}>
+          {
+              arr.map((value) =>
+                  <div className={testResult.box}onClick = { () => {
+                      navigate(`/drinks/${value.id}`);
+                  }}>
+
+                      <div className={ testResult.img__box }>
+                          <img src= {`/display/${value.id}`} className={testResult.id}></img>
+                      </div>
+                      <p className={testResult.title}> {value.title} </p>
+                  </div>
+              )
+          }
+      </div>
   )
 }
