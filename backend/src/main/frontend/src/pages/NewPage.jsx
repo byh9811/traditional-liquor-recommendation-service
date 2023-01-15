@@ -36,7 +36,6 @@ export default function NewPage() {
                 }}>
                     <div className={ testResult.img__box }>
                         <img src= {`/display/${value.id}`} className={testResult.id} />
-                    </div>
                     <p className={testResult.title}> {value.title} </p>
                 </div>
             )
