@@ -14,8 +14,7 @@ export default function NewPage() {
     let [inputData, setInputData] = useState([]);
     let [arr,setArr] = useState([]);
     let value = location.search;
-    let property = searchParams.get('answer'); // 잘 돼!!
-    let url;
+    let property = searchParams.get('answer'); // 잘 돼!! 
     // 검색값이 변할 때 마다 새로운 값을 불러오고싶어!!!!!!! 
     console.log('넘어온 data', property);
     useEffect(() => {
@@ -35,7 +34,10 @@ export default function NewPage() {
                 <div className={testResult.box}onClick = { () => {
                     navigate(`/drinks/${value.id}`);
                 }}>
-                    <img src= {`/display/${value.id}`} className={testResult.id}></img>
+                    url = `/display/${value.id}`;
+                    <div className={ testResult.img__box }>
+                        <img src= {url} className={testResult.id}></img>
+                    </div>
                     <p className={testResult.title}> {value.title} </p>
                 </div>
             )
