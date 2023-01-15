@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom'; // query string을 가져오기 위함! 
-import Bar from '../Pagination/Bar';
+
 import ShopCard from './ShopCard';
 
 import detail from './ShopDetail.module.css';
@@ -61,7 +61,7 @@ export default function ShopDetail() {
             
         </div>
         <div className={detail.shop__paging}>
-            <Bar />
+            
         </div>
     </div>
   )

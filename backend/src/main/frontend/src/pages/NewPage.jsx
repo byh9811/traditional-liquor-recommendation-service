@@ -3,9 +3,12 @@ import axios from 'axios';
 
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom'; // query string을 가져오기 위함! 
+import { useLocation, useSearchParams, useNavigate } from 'react-router-dom'; // query string을 가져오기 위함! 
 
+// css
+import testResult from './NewPage.module.css';
 export default function NewPage() {
+    const navigate = useNavigate();
     const location = useLocation();
     let [searchParams, setSearchParams] = useSearchParams();
     let [inputData, setInputData] = useState([]);
@@ -25,16 +28,17 @@ export default function NewPage() {
     },[ property ])
     console.log(arr);
   return (
-    <>
-        <p>넘어온 data --- {property}</p>
+    <div className={testResult.container}>
         {
             arr.map((value) => 
-                <p>
-                    <p> {value.id} </p>
-                    <p> {value.title} </p>
-                </p>
+                <div className={testResult.box}onClick = { () => {
+                    navigate(`/drinks/${value.id}`);
+                }}>
+                    <p className={testResult.id}> {value.id} </p>
+                    <p className={testResult.title}> {value.title} </p>
+                </div>
             )
         }
-    </>
+    </div>
   )
 }

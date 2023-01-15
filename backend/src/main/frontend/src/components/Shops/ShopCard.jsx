@@ -6,7 +6,7 @@ import detail from './ShopDetail.module.css';
 export default function ShopCard({ name, address, tel, menu, link }) {
     
   return (
-    <Link to={ link } className={detail.shop__card}>
+    <a href={ link } className={detail.shop__card}>
         <CardProperty 
             property = "식당이름"
             name = { name }
@@ -28,6 +28,6 @@ export default function ShopCard({ name, address, tel, menu, link }) {
             className = { detail.shop__menu }
         />
         
-    </Link>
+    </a>
   )
 }
