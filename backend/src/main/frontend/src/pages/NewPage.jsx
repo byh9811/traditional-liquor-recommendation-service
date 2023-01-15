@@ -34,9 +34,8 @@ export default function NewPage() {
                 <div className={testResult.box}onClick = { () => {
                     navigate(`/drinks/${value.id}`);
                 }}>
-                    url = `/display/${value.id}`;
                     <div className={ testResult.img__box }>
-                        <img src= {url} className={testResult.id}></img>
+                        <img src= {`/display/${value.id}`} className={testResult.id} />
                     </div>
                     <p className={testResult.title}> {value.title} </p>
                 </div>
