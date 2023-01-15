@@ -12,10 +12,16 @@
 
 .container > .box {
     display : flex;
+    position: relative;
     flex-direction: column;
 }
 .box > .id {
+    width: 100%;
     height : 70%;
+    max-height: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
     border : 2px solid black;
 }
 .box > .title {
