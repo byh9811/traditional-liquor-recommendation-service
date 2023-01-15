@@ -111,7 +111,8 @@
     display : none;
 }
 [type="radio"]:checked + label {
-    background-color: bisque;
+    background-color: antiquewhite !important;
+    /* label이 무조건 checked된 속성 다음에 있어야 발동이 돼!!! */
 }
 
 .question__page > .answer {

@@ -10,22 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Test() {
-  // // let arr = [1,2,3,4]; // 임의로 만든 배열;
-  // let content = ["🤮싫어한다","😕보통이다","😀좋아한다","🥰사랑한다"];
-  // let id = ["question1", "question2", 'question3', 'question4'];
-  // let [text, setText] = useState('');
-  // let question = ["단맛을 얼마나 좋아하세요?","신맛을 얼마나 좋아하세요?","바디감를 얼마나 좋아하세요?","청량감을 얼마나 좋아하세요?"]
-  // let [styles, setStyles] = useState({});
-  // let btnRef = useRef([]);
-  // function moveCarousel(index) {
-  //   // alert(`${index}버튼 눌림!`);
-  //   setStyles(
-  //     {
-  //       transition : 'all 0.5s',
-  //       transform : `translateX(${index * -25}%)`
-  //     }
-  //   )
-  // }
+  
   const [form, setForm] = useState({q1 : '', q2 : '', q3 : '', q4 : ''});
   const navigate = useNavigate();
 
@@ -66,20 +51,20 @@ export default function Test() {
               /> */}
               <p>01. 단맛을 얼마나 좋아하나요?</p>
               <p>
-                <label htmlFor="a1">사랑한다</label>
                 <input type="radio" name="q1" id="a1" onChange = { onChange } value = "4"/>
+                <label htmlFor="a1">사랑한다</label>
               </p>
               <p>
-              <label htmlFor="a2">좋아한다</label>
                 <input type="radio" name="q1" id="a2" onChange = { onChange } value = "3"/>
+              <label htmlFor="a2">좋아한다</label>
               </p>
               <p>
-                <label htmlFor="a3">그럭저럭</label>
                 <input type="radio" name="q1" id="a3" onChange = { onChange } value = "2"/>
+                <label htmlFor="a3">그럭저럭</label>
               </p>
               <p>
-                <label htmlFor="a4">싫어한다</label>
                 <input type="radio" name="q1" id="a4" onChange = { onChange } value = "1"/>
+                <label htmlFor="a4">싫어한다</label>
               </p>
               
             </div>
@@ -93,20 +78,20 @@ export default function Test() {
               <p>02. 신맛을 얼마나 좋아하나요?</p>
 
               <p>
-                <label htmlFor="b1">사랑한다</label>
                 <input type="radio" name="q2" id="b1" onChange = { onChange } value = "4"/>
+                <label htmlFor="b1">사랑한다</label>
               </p>
               <p>
-              <label htmlFor="b2">좋아한다</label>
                 <input type="radio" name="q2" id="b2" onChange = { onChange } value = "3"/>
+              <label htmlFor="b2">좋아한다</label>
               </p>
               <p>
-                <label htmlFor="b3">그럭저럭</label>
                 <input type="radio" name="q2" id="b3" onChange = { onChange } value = "2"/>
+                <label htmlFor="b3">그럭저럭</label>
               </p>
               <p>
-                <label htmlFor="b4">싫어한다</label>
                 <input type="radio" name="q2" id="b4" onChange = { onChange } value = "1"/>
+                <label htmlFor="b4">싫어한다</label>
               </p>
               
             </div>
@@ -120,20 +105,20 @@ export default function Test() {
               <p>03. 바디감을 얼마나 좋아하나요?</p>
 
               <p>
-                <label htmlFor="c1">사랑한다</label>
                 <input type="radio" name="q3" id="c1" onChange = { onChange } value = "4"/>
+                <label htmlFor="c1">사랑한다</label>
               </p>
               <p>
-              <label htmlFor="c2">좋아한다</label>
                 <input type="radio" name="q3" id="c2" onChange = { onChange } value = "3"/>
+              <label htmlFor="c2">좋아한다</label>
               </p>
               <p>
-                <label htmlFor="c3">그럭저럭</label>
                 <input type="radio" name="q3" id="c3" onChange = { onChange } value = "2"/>
+                <label htmlFor="c3">그럭저럭</label>
               </p>
               <p>
-                <label htmlFor="c4">싫어한다</label>
                 <input type="radio" name="q3" id="c4" onChange = { onChange } value = "1"/>
+                <label htmlFor="c4">싫어한다</label>
               </p>
               
             </div>
@@ -147,20 +132,20 @@ export default function Test() {
               <p>04. 청량감을 얼마나 좋아하나요?</p>
 
               <p>
-                <label htmlFor="d1">사랑한다</label>
                 <input type="radio" name="q4" id="d1" onChange = { onChange } value = "4"/>
+                <label htmlFor="d1">사랑한다</label>
               </p>
               <p>
-                <label htmlFor="d2">좋아한다</label>
                 <input type="radio" name="q4" id="d2" onChange = { onChange } value = "3"/>
+                <label htmlFor="d2">좋아한다</label>
               </p>
               <p>
-                <label htmlFor="d3">그럭저럭</label>
                 <input type="radio" name="q4" id="d3" onChange = { onChange } value = "2"/>
+                <label htmlFor="d3">그럭저럭</label>
               </p>
               <p>
-                <label htmlFor="d4">싫어한다</label>
                 <input type="radio" name="q4" id="d4" onChange = { onChange } value = "1"/>
+                <label htmlFor="d4">싫어한다</label>
               </p>
             </div>
 
