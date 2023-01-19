@@ -6,7 +6,7 @@ import Root from './pages/Root';
 import Home from './pages/Home';
 import Test from './pages/Test';
 import Shop from './pages/Shop';
-import DrinkResult from './pages/DrinkResult'; 
+import DrinkResult from './pages/DrinkResult.js'; 
 import DrinkDetail from './pages/DrinkDetail';
 import ShopDetail from './components/Shops/ShopDetail';
 import NewPage from './pages/NewPage';
