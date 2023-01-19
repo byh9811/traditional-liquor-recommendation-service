@@ -101,7 +101,7 @@
 ### 4. 전통주점 검색
 
 ![전통주점지역선택페이지](https://user-images.githubusercontent.com/50614241/212531717-1615bbd1-9228-4dc5-bb15-6b25102d651b.png)
-![전통주점리스트페이지](https://user-images.githubusercontent.com/50614241/212531720-660cfc71-4804-4a0a-b2ed-b38d75229659.png)
+![전통주점리스트페이지](https://user-images.githubusercontent.com/50614241/213473195-e0e0e0a5-6ce4-43ab-9c93-a929b0a4b57a.png)
 
 ----------------
 
