@@ -7,28 +7,30 @@ import Func from '../components/Func.jsx';
 // css file 
 import main from './Home.module.css'; 
 export default function Home() {
+  let linkArr = ["/test/index","/drinks?search=&page=1&limit=20",
+  "/stores/index"
+  ]
+  let imgArr = ["/img/test-removebg-preview.png",
+  "/img/all.jpeg",
+  "/img/shop-removebg-preview.png"
+  ]
   return (
     <div className={main.main__wrapper}>
-        <Func 
-          linkUrl="/test/index"
-          img = "/img/test-removebg-preview.png"
-        />
-        <Func 
-          linkUrl="/drinks?search=&page=1&limit=20"
-          img = "/img/all.jpeg"
-        />
-        <Func 
-          linkUrl="/stores/index"
-          img = "/img/shop-removebg-preview.png"
-        />
-        <div className={main.carousel}>
-            <Carousel /> 
-            {/* 이 캐러셀이 움직이는거야!! => 저 컴포넌트가 움직이는거야 무조건! */}
-            
-        </div>
-        <div className={main.dictionary}>
-          <SubCarousel />
-        </div>
+      {
+        linkArr.map((value, index) => 
+          <Func 
+            linkUrl = { linkArr[index] }
+            img = { imgArr[index] }
+          />
+        )
+      }
+      <div className={main.carousel}>
+          <Carousel /> 
+          {/* 이 캐러셀이 움직이는거야!! => 저 컴포넌트가 움직이는거야 무조건! */}
+      </div>
+      <div className={main.dictionary}>
+        <SubCarousel />
+      </div>
     </div>
   )
 }

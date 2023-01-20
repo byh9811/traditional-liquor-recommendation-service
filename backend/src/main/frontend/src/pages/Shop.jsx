@@ -12,10 +12,10 @@ export default function Shop() {
     <div className={shop.shop__wrapper}>
       {
         area.map((value, index) => 
-        <Area
-        key = { key[index] }
-        areaName = { value }
-        />)
+          <Area
+            key = { key[index] }
+            areaName = { value }
+          />)
       }
     </div>
   )

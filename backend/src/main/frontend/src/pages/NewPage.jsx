@@ -20,10 +20,7 @@ export default function NewPage() {
     useEffect(() => {
         axios.get(`recommendation?answer=${property}`)
         .then((res) => {
-        console.log(res);
-        console.log(res.data);
-        console.log(res.data.data);
-        setArr(res.data.data);
+            setArr(res.data.data);
         })
     },[ property ])
     console.log(arr);

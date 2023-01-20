@@ -1,44 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 // component
 import List from './Nav/List';
-
 // css file
 import nav from './Navbar.module.css';
-
 // font-awsome
 import { faNoteSticky, faWineBottle, faHeart, faShop } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar() {
+  let idList = ["1", "2", "3", "4"];
+  let iconList = [faHeart, faNoteSticky, faWineBottle, faShop];
+  let urlList = ['/', '/test/index', '/drinks?search=&page=1&limit=20',
+  '/stores/index'
+  ]
+  let linkNameList = ["HOM2", "T2ST", "DRINK5", "5HOP"];
   return (
     <nav>
       <ul className={nav.lists}>
-        {/* 여기까지 */}
-        <List 
-        id = "1"
-        icon = { faHeart }
-        url = "/"
-        linkName = "HOM2"
-        />
-        <List 
-        id = "2"
-        icon = { faNoteSticky }
-        url = "/test/index"
-        linkName = "T2ST"
-        />
-        <List 
-        id = "3"
-        icon = { faWineBottle }
-        url = "/drinks?search=&page=1&limit=20"
-        linkName = "DRINK5"
-        />
-        <List 
-        id = "4"
-        icon = { faShop }
-        url = "/stores/index"
-        linkName = "5HOP"
-        />
+        {
+          idList.map((value, index) => 
+            <List 
+              id = { idList[index] }
+              icon = { iconList[index] }
+              url = { urlList[index] }
+              linkName = { linkNameList[index] }
+            />
+          )
+        }
       </ul>
     </nav>
   )

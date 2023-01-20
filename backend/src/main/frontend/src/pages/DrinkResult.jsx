@@ -14,11 +14,9 @@ export default function DrinkResult() {
   let [searchParams, setSearchParams] = useSearchParams();
 
   // 현재 페이지 받아오는 data 
-  let [page, setPage] = useState([]);
   let [data, setData] = useState([]);
   let [currentPage, setCurrentPage] = useState();
 
-  let value = location.search;
   let property = searchParams.get('search'); // 잘 돼!! 
 
 
@@ -32,21 +30,11 @@ export default function DrinkResult() {
     // 2. 페이지 값 변경함.
     axios.get(`/drinks?search=${property}&page=${ 1 }&limit=20`)
     .then((res) => {
-      // 아이템을 받아왔을 때 ==> 
-      // 서버 totalpage 받아오고 
-      console.log(res.data.pageData);
-      
-      // totalpage변수로 받아주고... 
-      setPageCountArr(res.data.pageData); // 
-      console.log(res.data.data); // [ "입력해서 받아온 data개수가 뜸" ]
+      setPageCountArr(res.data.pageData); 
       setArr(res.data.data); // 값을 저장했어!!!!!! 
     })
   }, [ property ]) // 검색어가 계속 변경되고 앤터를 칠 때 마다... 
-  // item, 
-  console.log(`데이터 >> `);
-  console.log(arr);
-  console.log(`페이지 >> `);
-  console.log(pageCountArr); // state
+  
   let pageCnt = []; // 페이지가 담기는 진짜 배열 => 
   let start = ["<<"]; // 
   let end = [">>"]; // 
@@ -66,15 +54,8 @@ export default function DrinkResult() {
     value === ">>" ? value = pageCountArr.totalPages : value = value;
     axios.get(`/drinks?search=${property}&page=${value}&limit=20`)
     .then((res) => {
-      console.log(res);
-      console.log(res.data);
       setData(res.data.data);
       setPageCountArr(res.data.pageData);
-      console.log(pageCountArr);
-      // let { startPage, endPage, totalPages, currentPage } = res.data.pageData;
-      // console.log(startPage, endPage, totalPages, currentPage); 
-      // setPage([startPage, endPage, totalPages, currentPage]);
-      // setCurrentPage(currentPage);
       navigate(`/drinks?search=${property}&page=${currentPage}&limit=20`); // 페이지 이동!
       setArr(res.data.data);
     })
