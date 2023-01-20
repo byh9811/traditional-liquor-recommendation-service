@@ -6,6 +6,7 @@ export default function Question({ question, answer, name, onChange, id }) {
   return (
     <div className={test.question}>
         <p>{ question }</p>
+        
         <Radio 
             answer = { answer }
             name = { name }
