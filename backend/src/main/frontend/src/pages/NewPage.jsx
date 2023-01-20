@@ -28,6 +28,7 @@ export default function NewPage() {
     },[ property ])
     console.log(arr);
   return (
+
       <div className={testResult.container}>
           {
               arr.map((value) =>

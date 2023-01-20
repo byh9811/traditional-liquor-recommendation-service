@@ -5,14 +5,14 @@ import ButtonBox from './ButtonBox';
 import ItemBox from './ItemBox';
 // post css
 import carousel from './Carousel.module.css';
-import { faBlackTie, faBluetooth } from '@fortawesome/free-brands-svg-icons';
 
 export default function Carousel() {
-  // 여기에다가 또 item url연결시켜놓기!!
+  
   let btnRef = useRef([]); // 여러개를 배열로다가 관리... querySelectorAll같은 역할!
   let carRef = useRef();
   let [styles, setStyles] = useState({});
   let [data, setData] = useState([]);
+  let buttonCnt = [1, 2, 3];
   async function getData() {
     try {
       await axios.get(`/drinks/main-carousel`)
@@ -24,12 +24,7 @@ export default function Carousel() {
     }
   }
 
-  useEffect(() => {
-    getData();
-  }, [])
-
-  function moveCarousel(index) {
-    // alert(`${index}버튼 눌림!`);
+  let moveCarousel = (index) => {
     setStyles(
       {
         transition : 'all 0.5s',
@@ -37,6 +32,12 @@ export default function Carousel() {
       }
     )
   }
+
+  useEffect(() => {
+    getData();
+  }, [])
+  
+  
   
   return (
     <>
@@ -50,18 +51,17 @@ export default function Carousel() {
         </div>
     </div>
     <div className={carousel.buttons}>
-      <div className={`${carousel.button} ${carousel.first__button}`}
-      ref={el => (btnRef.current[0] = el)}
-      onMouseOver = { () => { moveCarousel(0)} }
-      ></div>
-      <div className={`${carousel.button} ${carousel.second__button}`}
-      ref={el => (btnRef.current[1] = el)}
-      onMouseOver = { () => { moveCarousel(1)} }
-      ></div>
-      <div className={`${carousel.button} ${carousel.third__button}`}
-      ref={el => (btnRef.current[2] = el)}
-      onMouseOver = { () => { moveCarousel(2)} }
-    ></div>
+      {/* 
+      tip : 함수는 부모에서 선언을 하고, 그 함수를 변수에 넣어서 변수를 
+            props로 전달! 
+      */}
+      {buttonCnt.map((value, index) => 
+        <ButtonBox 
+        // 
+        ref = { el => (btnRef.current[index] = el) }
+        mouseOver = { () => { moveCarousel(index) }}
+        />
+      )}
     </div>
     </>
   )
