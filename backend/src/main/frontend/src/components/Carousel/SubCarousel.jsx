@@ -1,11 +1,16 @@
+import axios from "axios";
 import React, {useEffect} from 'react'
 import { useRef, useState } from 'react';
+
 // css 
 import sub from './SubCarousel.module.css';
+
+// component
 import SubItem from './SubItem';
-import axios from "axios";
+import SubButtonBox from './SubButtonBox';
 
 export default function SubCarousel() {
+  let subButtonCnt = [1,2,3,4,5];
   let btnRef = useRef([]);
   let carRef = useRef();
   let [styles, setStyles] = useState({});
@@ -14,7 +19,6 @@ export default function SubCarousel() {
     try {
       await axios.get(`/guides`)
           .then((res) => {
-            console.log(res.data.data);
             setGuides(res.data.data);
           })
     } catch (err) {
@@ -24,6 +28,7 @@ export default function SubCarousel() {
   useEffect(() => {
     getGuides();
   }, [])
+
   function moveCarousel(index) {
     // alert(`${index}버튼 눌림!`);
     setStyles(
@@ -51,27 +56,14 @@ export default function SubCarousel() {
     리펙토링 필요!! 
     */}
     <div className={ sub.buttons }>
-      <div className={sub.button}
-      ref={el => (btnRef.current[0] = el)}
-      onMouseOver = { () => { moveCarousel(0)} }
-      ></div>
-      <div className={sub.button}
-      ref={el => (btnRef.current[1] = el)}
-      onMouseOver = { () => { moveCarousel(1)} }
-      ></div>
-      <div className={sub.button}
-      ref={el => (btnRef.current[2] = el)}
-      onMouseOver = { () => { moveCarousel(2)} }
-      ></div>
-      <div className={sub.button}
-      ref={el => (btnRef.current[3] = el)}
-      onMouseOver = { () => { moveCarousel(3)} }
-      ></div>
-      <div className={sub.button}
-      ref={el => (btnRef.current[4] = el)}
-      onMouseOver = { () => { moveCarousel(4)} }
-      // 이거 컴포넌트화 시킼ㄹ거야! => 싹 다 리펙토링할게 기다려
-      ></div>
+      {
+        subButtonCnt.map((value, index ) => 
+          <SubButtonBox 
+            ref = { el => (btnRef.current[index] = el) }
+            onMouseOver = { () => { moveCarousel(index)} }
+          />
+        )
+      }
     </div>
     </>
   )

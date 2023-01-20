@@ -1,5 +1,7 @@
 .content {
     text-align: center;
+    /* border : 1px solid black; */
+    padding : 1% 1%;
 }
 
 .property {
@@ -11,4 +13,7 @@
 }
 .value {
     padding : 1% 3%;
+}
+.value:nth-child(1) {
+    color : red;
 }

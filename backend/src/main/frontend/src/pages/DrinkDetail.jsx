@@ -13,30 +13,15 @@ import detail from './DrinkDetail.module.css';
 export default function DrinkDetail() { // id값을 넘겨줘야했음!
   // id를 넘겨줘야하잖아. => 그럼 db에서 id가 n번인 값을 요청하자. 
   const { id } = useParams();
-  console.log('id >>>>>> ');
-  console.log(id);
   let [ drinkData, setDrinkData ] = useState({});
-  // 2 setD(2)
-  let name = "배용현"
-  name = "김지성"
-  console.log(name); 
 
   useEffect(() => {
     // id값을 받아와야함...
     axios.get(`/drinks/${id}`)
     .then((res) => {
-      console.log(' 출력 ');
-      console.log(res.data.data);
-      console.log(res.data.data.title); // undefined
       setDrinkData(res.data.data); // res.data.data.title
-      // 재랜더링이 돼! 
-      // 
     })
   }, []); // 처음에만 1번 딱 호출이 된다고 생각 
-  
-  console.log(`====== 출력 ======`);
-  console.log(drinkData.title);
-  
   return (
     <div className={detail.detail__wrapper}>
         <div className={detail.detail__img}>

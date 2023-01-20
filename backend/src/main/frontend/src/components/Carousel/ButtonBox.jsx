@@ -6,7 +6,6 @@ export default function ButtonBox({ ref, mouseOver }) {
     <div
     className = { carousel.button }
     ref = { ref }
-    // mouseOver = { () => { alert('mouseover!') } }
     onMouseOver = { mouseOver }
     ></div>
   )
