@@ -1,6 +1,5 @@
 package com.theStupids.traditionalliquorrecommendationservice.repository;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
 import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
 import com.theStupids.traditionalliquorrecommendationservice.domain.StoreList;
 import org.springframework.data.domain.Page;
