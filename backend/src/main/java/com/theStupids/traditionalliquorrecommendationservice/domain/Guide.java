@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 
 @Entity(name = "guide")
 @Getter
-@Setter
 public class Guide {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
