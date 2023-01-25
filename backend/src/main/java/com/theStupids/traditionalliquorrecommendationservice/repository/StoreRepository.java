@@ -1,7 +1,7 @@
 package com.theStupids.traditionalliquorrecommendationservice.repository;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
-import com.theStupids.traditionalliquorrecommendationservice.domain.StoreList;
+import com.theStupids.traditionalliquorrecommendationservice.domain.store.Store;
+import com.theStupids.traditionalliquorrecommendationservice.domain.store.StoreList;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

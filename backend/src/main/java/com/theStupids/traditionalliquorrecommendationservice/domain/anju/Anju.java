@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain.Anju;
+package com.theStupids.traditionalliquorrecommendationservice.domain.anju;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

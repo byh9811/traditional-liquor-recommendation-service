@@ -1,7 +1,7 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
-import com.theStupids.traditionalliquorrecommendationservice.domain.StoreList;
+import com.theStupids.traditionalliquorrecommendationservice.domain.store.Store;
+import com.theStupids.traditionalliquorrecommendationservice.domain.store.StoreList;
 import lombok.Data;
 
 import java.util.List;

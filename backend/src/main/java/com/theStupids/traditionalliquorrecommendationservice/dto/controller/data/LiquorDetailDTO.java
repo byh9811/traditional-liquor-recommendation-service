@@ -1,6 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor.Liquor;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.Liquor;
 import lombok.Data;
 
 import java.util.List;

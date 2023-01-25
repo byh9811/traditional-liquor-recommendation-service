@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.sell;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

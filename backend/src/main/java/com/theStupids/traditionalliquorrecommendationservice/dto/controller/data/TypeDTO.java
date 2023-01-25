@@ -1,6 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Type;
+import com.theStupids.traditionalliquorrecommendationservice.domain.type.Type;
 import lombok.Data;
 
 @Data

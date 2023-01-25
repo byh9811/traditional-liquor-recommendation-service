@@ -1,6 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Guide;
+import com.theStupids.traditionalliquorrecommendationservice.domain.guide.Guide;
 import com.theStupids.traditionalliquorrecommendationservice.repository.GuideRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

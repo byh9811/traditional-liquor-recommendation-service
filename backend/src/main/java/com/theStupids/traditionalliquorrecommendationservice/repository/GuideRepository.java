@@ -1,6 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.repository;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Guide;
+import com.theStupids.traditionalliquorrecommendationservice.domain.guide.Guide;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

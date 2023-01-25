@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.sell;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

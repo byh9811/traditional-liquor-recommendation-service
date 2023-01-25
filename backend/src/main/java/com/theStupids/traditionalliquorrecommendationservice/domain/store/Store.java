@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.store;
 
 import jakarta.persistence.*;
 import lombok.Getter;

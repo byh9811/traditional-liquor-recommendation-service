@@ -1,7 +1,6 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
+package com.theStupids.traditionalliquorrecommendationservice.domain.liquor;
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 
 @Entity(name = "liquor")

@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
+package com.theStupids.traditionalliquorrecommendationservice.domain.liquor;
 
 public interface LiquorList {
     int getId();
