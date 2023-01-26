@@ -1,11 +1,11 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.anju;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 @Entity(name = "anju")
 @IdClass(AnjuId.class)
 public class Anju {

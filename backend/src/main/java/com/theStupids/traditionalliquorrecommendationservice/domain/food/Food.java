@@ -1,10 +1,10 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.food;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 
 @Entity(name = "food")
-@Data
+@Getter
 public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

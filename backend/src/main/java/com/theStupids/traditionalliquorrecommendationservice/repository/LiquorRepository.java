@@ -1,9 +1,9 @@
 package com.theStupids.traditionalliquorrecommendationservice.repository;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorCarousel;
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorRecommend;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.Liquor;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorCarousel;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorList;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorRecommend;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

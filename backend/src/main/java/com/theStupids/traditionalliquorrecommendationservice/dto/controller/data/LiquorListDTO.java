@@ -1,13 +1,12 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorList;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 public class LiquorListDTO {
     private int id;
     private String title;

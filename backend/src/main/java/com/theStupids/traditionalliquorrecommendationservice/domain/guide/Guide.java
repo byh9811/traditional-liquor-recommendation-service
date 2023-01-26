@@ -1,4 +1,4 @@
-package com.theStupids.traditionalliquorrecommendationservice.domain;
+package com.theStupids.traditionalliquorrecommendationservice.domain.guide;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,6 @@ import jakarta.persistence.*;
 
 @Entity(name = "guide")
 @Getter
-@Setter
 public class Guide {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Liquor;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.Liquor;
 import lombok.Data;
 
 import java.util.List;
@@ -20,7 +20,6 @@ public class LiquorDetailDTO {
     private int cool;
     private String material;
     private String company;
-    private int flavorType;
 
     public LiquorDetailDTO(Liquor liquor, List<String> food) {
         this.id = liquor.getId();
@@ -36,6 +35,5 @@ public class LiquorDetailDTO {
         this.cool = liquor.getCool();
         this.material = liquor.getMaterial();
         this.company = liquor.getCompany();
-        this.flavorType = liquor.getFlavor_type();
     }
 }

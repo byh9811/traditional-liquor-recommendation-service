@@ -1,6 +1,5 @@
 package com.theStupids.traditionalliquorrecommendationservice.controller;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Store;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.StoreDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.PageData;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.response.PagingResponse;
@@ -12,8 +11,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
 
 @RestController
 @RequiredArgsConstructor

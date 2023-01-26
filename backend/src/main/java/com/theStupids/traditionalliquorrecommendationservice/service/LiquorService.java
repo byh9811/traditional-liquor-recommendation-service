@@ -1,8 +1,8 @@
 package com.theStupids.traditionalliquorrecommendationservice.service;
 
-import com.theStupids.traditionalliquorrecommendationservice.domain.Food;
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorCarousel;
-import com.theStupids.traditionalliquorrecommendationservice.domain.LiquorList;
+import com.theStupids.traditionalliquorrecommendationservice.domain.food.Food;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorCarousel;
+import com.theStupids.traditionalliquorrecommendationservice.domain.liquor.LiquorList;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorDetailDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorListDTO;
 import com.theStupids.traditionalliquorrecommendationservice.dto.controller.data.LiquorRecommendDTO;
@@ -14,7 +14,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
