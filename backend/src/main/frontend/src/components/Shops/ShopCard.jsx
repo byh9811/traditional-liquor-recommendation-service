@@ -8,7 +8,7 @@ export default function ShopCard({ name, address, tel, menu, link }) {
     let className = [detail.shop__name, detail.shop__address,
         detail.shop__tel, detail.shop__menu
     ]
-    let names = [ name, address, tel, menu]
+    let names = [ name, address, tel, menu ]
   return (
     <a href={ link } className={detail.shop__card}>
         {
