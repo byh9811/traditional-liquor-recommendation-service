@@ -1,7 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.dto.controller.data;
 
 import com.theStupids.traditionalliquorrecommendationservice.domain.store.Store;
-import com.theStupids.traditionalliquorrecommendationservice.domain.store.StoreList;
 import lombok.Data;
 
 import java.util.List;
@@ -16,15 +15,6 @@ public class StoreDTO {
     private String link;
 
     public StoreDTO(Store store, List<String> menu) {
-        this.id = store.getId();
-        this.name = store.getName();
-        this.address = store.getAddress();
-        this.tel = store.getTel();
-        this.link = store.getLink();
-        this.menu = menu;
-    }
-
-    public StoreDTO(StoreList store, List<String> menu) {
         this.id = store.getId();
         this.name = store.getName();
         this.address = store.getAddress();
