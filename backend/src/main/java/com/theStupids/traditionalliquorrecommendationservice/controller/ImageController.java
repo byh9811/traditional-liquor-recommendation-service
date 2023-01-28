@@ -1,5 +1,6 @@
 package com.theStupids.traditionalliquorrecommendationservice.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+@Slf4j
 @RestController
 public class ImageController {
     @Value("${value.imgPath}")
@@ -24,7 +26,7 @@ public class ImageController {
 
     @GetMapping(value = "/display/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable("id") String id) {
-        byte[] imageByteArray = null;
+        byte[] imageByteArray;
         try {
             String fileName = imgPath + id + ".BMP"; // 파일경로
             File file = new File(fileName);
@@ -35,7 +37,8 @@ public class ImageController {
         } catch (FileNotFoundException e) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         } catch (IOException e) {
-            return new ResponseEntity<>(null, HttpStatus.INSUFFICIENT_STORAGE);
+            log.error(e.getMessage());
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         return new ResponseEntity<>(imageByteArray, HttpStatus.OK);
