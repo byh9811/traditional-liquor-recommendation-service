@@ -48,15 +48,13 @@
   - Tomcat 10.1.1
   - Slf4j 2.0.4
   - Lombok 1.18.24
-- `Database`
-  - MySQL 8.0.28
 - `Server`
   - AWS EC2
     - t2.micro
-    - Ubuntu Linux
+    - Ubuntu Linux 20.04
   - AWS RDS
     - db.t3.micro
-    - mysql
+    - MySQL 8.0.28
   - 가비아 DNS
     - www.stupids.shop
 
